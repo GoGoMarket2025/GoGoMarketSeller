@@ -19,7 +19,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/screens/add_new_deliv
 class DeliveryManCardWidget extends StatelessWidget {
   final DeliveryMan? deliveryMan;
   final bool isDetails;
-  const DeliveryManCardWidget({Key? key, this.deliveryMan, this.isDetails = false}) : super(key: key);
+  const DeliveryManCardWidget({super.key, this.deliveryMan, this.isDetails = false});
 
   @override
   Widget build(BuildContext context) {

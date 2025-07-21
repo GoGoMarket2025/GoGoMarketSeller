@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/features/shipping/controllers/shipping_cont
 import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 
 class DropDownForShippingTypeWidget extends StatelessWidget {
-  const DropDownForShippingTypeWidget({Key? key}) : super(key: key);
+  const DropDownForShippingTypeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

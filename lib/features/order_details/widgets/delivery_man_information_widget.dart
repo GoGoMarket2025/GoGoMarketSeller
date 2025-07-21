@@ -12,7 +12,7 @@ class DeliveryManContactInformationWidget extends StatelessWidget {
   final String? orderType;
   final Order? orderModel;
   final bool? onlyDigital;
-  const DeliveryManContactInformationWidget({Key? key, this.orderModel, this.orderType, this.onlyDigital}) : super(key: key);
+  const DeliveryManContactInformationWidget({super.key, this.orderModel, this.orderType, this.onlyDigital});
 
   @override
   Widget build(BuildContext context) {

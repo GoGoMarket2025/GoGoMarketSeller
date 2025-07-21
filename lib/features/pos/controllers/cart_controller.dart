@@ -64,7 +64,7 @@ class CartController extends ChangeNotifier{
   final TextEditingController _extraDiscountController = TextEditingController();
   TextEditingController get extraDiscountController => _extraDiscountController;
 
-  double _returnToCustomerAmount = 0 ;
+  final double _returnToCustomerAmount = 0 ;
   double get returnToCustomerAmount => _returnToCustomerAmount;
 
   double? _couponCodeAmount = 0;
@@ -73,11 +73,11 @@ class CartController extends ChangeNotifier{
   double _extraDiscountAmount = 0;
   double get extraDiscountAmount =>_extraDiscountAmount;
 
-  int _discountTypeIndex = 0;
+  final int _discountTypeIndex = 0;
   int get discountTypeIndex => _discountTypeIndex;
 
 
-  String? _selectedDiscountType = '';
+  final String _selectedDiscountType = '';
   String? get selectedDiscountType => _selectedDiscountType;
 
   bool _isLoading = false;
@@ -303,7 +303,7 @@ class CartController extends ChangeNotifier{
 
 
 
-  updateCart(BuildContext context,CartModel cartModel) {
+  void updateCart(BuildContext context,CartModel cartModel) {
     String variantKey = getVariantKey(cartModel);
 
     for(int index = 0; index < (_currentCartModel?.cart?.length ?? 0); index++) {
@@ -411,7 +411,7 @@ class CartController extends ChangeNotifier{
   }
 
 
-  setCurrentCartCustomerInfo(int? id, String? name, String? phone, double? customerBalance, bool notify) {
+  void setCurrentCartCustomerInfo(int? id, String? name, String? phone, double? customerBalance, bool notify) {
     _currentCartModel?.userId = id;
     _currentCartModel?.customerName = name;
     _currentCartModel?.phoneNumber = phone;

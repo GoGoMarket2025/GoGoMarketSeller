@@ -7,7 +7,7 @@ class ShopBannerWidget extends StatelessWidget {
   final ShopController? resProvider;
   final bool fromBottom;
   final bool fromOffer;
-  const ShopBannerWidget({Key? key, this.resProvider, this.fromBottom = false, this.fromOffer = false}) : super(key: key);
+  const ShopBannerWidget({super.key, this.resProvider, this.fromBottom = false, this.fromOffer = false});
 
   @override
   Widget build(BuildContext context) {

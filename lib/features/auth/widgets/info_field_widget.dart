@@ -22,7 +22,7 @@ import 'package:sixvalley_vendor_app/features/more/screens/html_view_screen.dart
 
 class InfoFieldVIewWidget extends StatefulWidget {
   final bool isShopInfo;
-  const InfoFieldVIewWidget({Key? key, this.isShopInfo = false}) : super(key: key);
+  const InfoFieldVIewWidget({super.key, this.isShopInfo = false});
 
   @override
   State<InfoFieldVIewWidget> createState() => _InfoFieldVIewWidgetState();

@@ -31,7 +31,7 @@ import 'package:sixvalley_vendor_app/features/barcode/screens/bar_code_generator
 class ShopProductWidget extends StatefulWidget {
   final Product? productModel;
   final bool isDetails;
-  const ShopProductWidget({Key? key, required this.productModel, this.isDetails = false}) : super(key: key);
+  const ShopProductWidget({super.key, required this.productModel, this.isDetails = false});
 
   @override
   State<ShopProductWidget> createState() => _ProductWidgetState();

@@ -13,7 +13,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_divider_widget.da
 class EarningCardWidget extends StatelessWidget {
   final Earning earning;
   final int? index;
-  const EarningCardWidget({Key? key, required this.earning, this.index}) : super(key: key);
+  const EarningCardWidget({super.key, required this.earning, this.index});
 
   @override
   Widget build(BuildContext context) {

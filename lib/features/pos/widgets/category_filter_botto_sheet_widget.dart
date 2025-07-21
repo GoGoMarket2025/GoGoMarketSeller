@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_button_widget.dar
 import 'package:sixvalley_vendor_app/common/basewidgets/custom_snackbar_widget.dart';
 
 class CategoryFilterBottomSheetWidget extends StatelessWidget {
-  const CategoryFilterBottomSheetWidget({Key? key}) : super(key: key);
+  const CategoryFilterBottomSheetWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

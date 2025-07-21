@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/features/shipping/screens/category_wise_shi
 import 'package:sixvalley_vendor_app/features/shipping/widgets/product_wise_shipping_widget.dart';
 
 class ThemeChangerWidget extends StatelessWidget {
-  const ThemeChangerWidget({Key? key}) : super(key: key);
+  const ThemeChangerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +94,7 @@ class SectionItemWidget extends StatelessWidget {
   final String? icon;
   final String? title;
   final Function? onTap;
-  const SectionItemWidget({Key? key, this.onTap, this.icon, this.title}) : super(key: key);
+  const SectionItemWidget({super.key, this.onTap, this.icon, this.title});
 
   @override
   Widget build(BuildContext context) {

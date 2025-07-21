@@ -7,7 +7,7 @@ import 'image_diaglog_widget.dart';
 
 class RefundAttachmentListWidget extends StatelessWidget {
   final RefundModel? refundModel;
-  const RefundAttachmentListWidget({Key? key, this.refundModel}) : super(key: key);
+  const RefundAttachmentListWidget({super.key, this.refundModel});
 
   @override
   Widget build(BuildContext context) {

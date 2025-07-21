@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/features/language/screens/change_language_s
 import 'package:sixvalley_vendor_app/features/settings/widgets/choose_shipping_dialog_widget.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class TitleButton extends StatelessWidget {
   final String icon;
   final String? title;
   final Function onTap;
-  const TitleButton({Key? key, required this.icon, required this.title, required this.onTap}) : super(key: key);
+  const TitleButton({super.key, required this.icon, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

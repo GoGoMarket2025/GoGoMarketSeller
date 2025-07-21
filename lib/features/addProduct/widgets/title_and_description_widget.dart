@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 class TitleAndDescriptionWidget extends StatefulWidget {
   final AddProductController resProvider;
   final int index;
-  const TitleAndDescriptionWidget({Key? key, required this.resProvider, required  this.index}) : super(key: key);
+  const TitleAndDescriptionWidget({super.key, required this.resProvider, required  this.index});
 
   @override
   State<TitleAndDescriptionWidget> createState() => _TitleAndDescriptionWidgetState();

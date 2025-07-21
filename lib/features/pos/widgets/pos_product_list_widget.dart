@@ -8,7 +8,7 @@ class PosProductListWidget extends StatelessWidget {
   final List<Product>? productList;
   final ScrollController? scrollController;
   final ProductController? productProvider;
-  const PosProductListWidget({Key? key, this.productList, this.scrollController, this.productProvider}) : super(key: key);
+  const PosProductListWidget({super.key, this.productList, this.scrollController, this.productProvider});
 
   @override
   Widget build(BuildContext context) {

@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/features/emergency_contract/widgets/add_eme
 import 'package:sixvalley_vendor_app/features/emergency_contract/widgets/emergency_contact_list_widget.dart';
 
 class EmergencyContactScreen extends StatefulWidget {
-  const EmergencyContactScreen({Key? key}) : super(key: key);
+  const EmergencyContactScreen({super.key});
 
   @override
   State<EmergencyContactScreen> createState() => _EmergencyContactScreenState();

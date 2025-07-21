@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'package:country_code_picker/country_code_picker.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +22,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/domain/model/top_deli
 class DeliveryManInfoWidget extends StatefulWidget {
   final bool isPassword;
   final DeliveryMan? deliveryMan;
-  const DeliveryManInfoWidget({Key? key, this.isPassword = false, this.deliveryMan}) : super(key: key);
+  const DeliveryManInfoWidget({super.key, this.isPassword = false, this.deliveryMan});
 
   @override
   State<DeliveryManInfoWidget> createState() => _DeliveryManInfoWidgetState();

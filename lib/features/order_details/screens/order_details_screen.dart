@@ -31,7 +31,7 @@ import 'package:sixvalley_vendor_app/features/order_details/widgets/third_party_
 class OrderDetailsScreen extends StatefulWidget {
   final int? orderId;
   final bool fromNotification;
-  const OrderDetailsScreen({Key? key,  required this.orderId, this.fromNotification = false}) : super(key: key);
+  const OrderDetailsScreen({super.key,  required this.orderId, this.fromNotification = false});
 
   @override
   State<OrderDetailsScreen> createState() => _OrderDetailsScreenState();

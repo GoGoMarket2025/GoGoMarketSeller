@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class CustomEditDialogWidget extends StatefulWidget {
   final double totalEarning;
-  const CustomEditDialogWidget({Key? key, required this.totalEarning}) : super(key: key);
+  const CustomEditDialogWidget({super.key, required this.totalEarning});
 
   @override
   CustomEditDialogWidgetState createState() => CustomEditDialogWidgetState();

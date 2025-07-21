@@ -18,7 +18,7 @@ import 'package:sixvalley_vendor_app/features/shipping/widgets/drop_down_for_shi
 import 'package:sixvalley_vendor_app/features/shop/widgets/animated_floating_button_widget.dart';
 
 class OrderWiseShippingScreen extends StatefulWidget {
-  const OrderWiseShippingScreen({Key? key}) : super(key: key);
+  const OrderWiseShippingScreen({super.key});
 
   @override
   State<OrderWiseShippingScreen> createState() => OrderWiseShippingScreenState();

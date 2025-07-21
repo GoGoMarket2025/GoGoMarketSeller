@@ -6,7 +6,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 
 class CustomLoaderWidget extends StatelessWidget {
   final double height;
-  const CustomLoaderWidget({Key? key, this.height = 1200}) : super(key: key);
+  const CustomLoaderWidget({super.key, this.height = 1200});
 
   @override
   Widget build(BuildContext context) {

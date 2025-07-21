@@ -31,7 +31,7 @@ class CustomAppBarWidget extends StatelessWidget implements PreferredSizeWidget 
   final bool isRemoveShadow;
   final Widget? widget;
   final TextStyle? titleTextStyle;
-  const CustomAppBarWidget({Key? key, required this.title,
+  const CustomAppBarWidget({super.key, required this.title,
     this.isBackButtonExist = true,
     this.onBackPressed,
     this.isAction = false,
@@ -50,7 +50,7 @@ class CustomAppBarWidget extends StatelessWidget implements PreferredSizeWidget 
     this.fromProduct = false,
     this.isRemoveShadow = false,
     this.titleTextStyle
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

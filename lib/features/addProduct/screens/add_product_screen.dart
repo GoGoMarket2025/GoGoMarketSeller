@@ -35,7 +35,7 @@ class AddProductScreen extends StatefulWidget {
   final AddProductModel? addProduct;
   final EditProductModel? editProduct;
   final bool fromHome;
-  const AddProductScreen({Key? key, this.product,  this.addProduct, this.editProduct,  this.fromHome = false}) : super(key: key);
+  const AddProductScreen({super.key, this.product,  this.addProduct, this.editProduct,  this.fromHome = false});
   @override
   AddProductScreenState createState() => AddProductScreenState();
 }

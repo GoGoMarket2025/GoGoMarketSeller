@@ -13,7 +13,7 @@ import 'package:sixvalley_vendor_app/features/order_details/screens/order_detail
 class DeliveryManOrderHistoryWidget extends StatelessWidget {
   final Order orderModel;
   final int? index;
-  const DeliveryManOrderHistoryWidget({Key? key, required this.orderModel, this.index}) : super(key: key);
+  const DeliveryManOrderHistoryWidget({super.key, required this.orderModel, this.index});
 
   @override
   Widget build(BuildContext context) {

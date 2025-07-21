@@ -16,7 +16,7 @@ class CustomButtonWidget extends StatelessWidget {
   final bool isLoading;
 
   const CustomButtonWidget({
-    Key? key, this.onTap,
+    super.key, this.onTap,
     required this.btnTxt,
     this.backgroundColor,
     this.isColor = false,
@@ -26,7 +26,7 @@ class CustomButtonWidget extends StatelessWidget {
     this.buttonHeight = 40,
     this.textSize = Dimensions.fontSizeDefault,
     this.isLoading = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -20,7 +20,7 @@ import 'package:sixvalley_vendor_app/features/order/screens/order_screen.dart';
 import 'package:sixvalley_vendor_app/features/refund/screens/refund_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+  const DashboardScreen({super.key});
 
   @override
   DashboardScreenState createState() => DashboardScreenState();

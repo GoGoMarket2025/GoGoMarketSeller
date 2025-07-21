@@ -11,13 +11,13 @@ class InvoiceElementViewWidget extends StatelessWidget {
   final String? quantity;
   final String? price;
   const InvoiceElementViewWidget({
-    Key? key,
+    super.key,
     this.serial,
     this.isBold = false,
     this.title,
     this.quantity,
     this.price,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

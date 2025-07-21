@@ -31,7 +31,7 @@ import '../../../main.dart';
 
 class ProductDetailsWidget extends StatefulWidget {
   final Product? productModel;
-  const ProductDetailsWidget({Key? key, this.productModel}) : super(key: key);
+  const ProductDetailsWidget({super.key, this.productModel});
 
   @override
   State<ProductDetailsWidget> createState() => _ProductDetailsWidgetState();
@@ -43,243 +43,243 @@ class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
   Widget build(BuildContext context) {
 
     return Consumer<CategoryController>(
-      builder: (context, categoryProvider,_) {
-        String? category = '';
-        if(categoryProvider.categoryList != null && categoryProvider.categoryList!.isNotEmpty){
-        for(int i=0; i< categoryProvider.categoryList!.length; i++){
-          if(widget.productModel!.categoryIds![0].id == categoryProvider.categoryList![i].id.toString()){
-            category = categoryProvider.categoryList![i].name;
-          }}}
+        builder: (context, categoryProvider,_) {
+          String? category = '';
+          if(categoryProvider.categoryList != null && categoryProvider.categoryList!.isNotEmpty){
+            for(int i=0; i< categoryProvider.categoryList!.length; i++){
+              if(widget.productModel!.categoryIds![0].id == categoryProvider.categoryList![i].id.toString()){
+                category = categoryProvider.categoryList![i].name;
+              }}}
 
-        bool isClearanceSaleActive = widget.productModel?.clearanceSale != null;
+          bool isClearanceSaleActive = widget.productModel?.clearanceSale != null;
 
-        return RefreshIndicator(
-          onRefresh: () async{
-            Provider.of<ProductDetailsController>(context, listen: false).getProductDetails(widget.productModel!.id);
-            Provider.of<CategoryController>(context,listen: false).getCategoryList(context,null, 'en');
-          },
-          child: Column(children: [
-            Expanded(child: SingleChildScrollView(
-              child: Column(children: [
+          return RefreshIndicator(
+            onRefresh: () async{
+              Provider.of<ProductDetailsController>(context, listen: false).getProductDetails(widget.productModel!.id);
+              Provider.of<CategoryController>(context,listen: false).getCategoryList(context,null, 'en');
+            },
+            child: Column(children: [
+              Expanded(child: SingleChildScrollView(
+                child: Column(children: [
 
-                _ProductWidget(productModel: widget.productModel),
-                const SizedBox(height: Dimensions.paddingSizeExtraSmall),
+                  _ProductWidget(productModel: widget.productModel),
+                  const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-                /// General Information
-                Container(
-                  padding: const EdgeInsets.all(Dimensions.paddingSizeMedium),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).cardColor,
-                    boxShadow: [BoxShadow(
-                      offset: const Offset(0, 3),
-                      blurRadius: 8,
-                      color: Theme.of(context).primaryColor.withValues(alpha: 0.08),
-                    )],
-                  ),
-                  child: Column(children: [
-                    _InformationTitleWidget(title: getTranslated('general_information', context)!),
-                    const SizedBox(height: Dimensions.paddingSizeMedium),
-
-                    if( widget.productModel!.productType == 'physical')
-                    _InformationElementWidget(labelText: getTranslated('brand', context)!, infoText: widget.productModel?.brand?.name ?? ''),
-
-                    _InformationElementWidget(labelText: getTranslated('category', context)!, infoText: widget.productModel?.category?.name ?? ''),
-
-                    _InformationElementWidget(labelText: getTranslated('product_type', context)!, infoText: widget.productModel?.productType ?? ''),
-
-                    widget.productModel!.productType == 'physical' ?
-                    _InformationElementWidget(labelText: getTranslated('product_unit', context)!, infoText: widget.productModel?.unit ?? '') : const SizedBox(),
-
-                    widget.productModel!.productType == 'physical' ?
-                    _InformationElementWidget(
-                      labelText: getTranslated('current_stock', context)!,
-                      infoText: widget.productModel?.currentStock.toString() ?? '',
-                    ) : const SizedBox(),
-
-                    _InformationElementWidget(
-                      labelText: getTranslated('product_sku', context)!,
-                      infoText: widget.productModel?.code ?? '',
-                      showDivider: false,
-                    ),
-                  ]),
-                ),
-                const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-
-
-                /// Price Information
-                Container(
-                  padding: const EdgeInsets.all(Dimensions.paddingSizeMedium),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).cardColor,
-                    boxShadow: [BoxShadow(
-                      offset: const Offset(0, 3),
-                      blurRadius: 8,
-                      color: Theme.of(context).primaryColor.withValues(alpha: 0.08),
-                    )],
-                  ),
-                  child: Column(children: [
-                    _InformationTitleWidget(title: getTranslated('price_information', context)!),
-                    const SizedBox(height: Dimensions.paddingSizeMedium),
-
-                    _InformationElementWidget(
-                      labelText: getTranslated('unit_price', context)!,
-                      infoText: widget.productModel?.unitPrice?.toStringAsFixed(2) ?? '',
-                      valueWithSign: true,
-                    ),
-
-                    _InformationElementWidget(
-                      labelText: getTranslated('tax', context)!,
-                      infoText: widget.productModel?.tax?.toStringAsFixed(2) ?? '',
-                      isPercentage: true,
-                    ),
-
-                    widget.productModel!.productType == 'physical'?
-                    _InformationElementWidget(
-                      labelText: getTranslated('shipping_cost', context)!,
-                      infoText:  PriceConverter.convertPrice(context,  double.tryParse(widget.productModel?.shippingCost.toString() ?? '') ?? 0)  ,
-                    ) : const SizedBox(),
-
-                    isClearanceSaleActive ?
-                    _InformationElementWidget(
-                      labelText: getTranslated('discount', context)!,
-                      infoText: widget.productModel!.clearanceSale!.discountType == 'percentage'? widget.productModel!.clearanceSale!.discountAmount.toString() : '0',
-                      showDivider: false,
-                      isPercentage: widget.productModel!.clearanceSale!.discountType == 'percentage',
-                      valueWithSign: widget.productModel!.clearanceSale!.discountType == 'flat',
-                    ) :
-                    _InformationElementWidget(
-                      labelText: getTranslated('discount', context)!,
-                      infoText: widget.productModel!.discountType == 'percent'? widget.productModel!.discount.toString() : widget.productModel!.discount.toString(),
-                      valueWithSign : widget.productModel!.discountType == 'flat',
-                      isPercentage: widget.productModel!.discountType == 'percent',
-                      showDivider: false,
-                    ),
-                  ]),
-                ),
-                const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-
-                /// Variation
-                if((widget.productModel?.variation?.isNotEmpty ?? false) || (widget.productModel?.digitalVariation?.isNotEmpty ?? false)) ...[
+                  /// General Information
                   Container(
-                    padding: const EdgeInsets.all(Dimensions.paddingSizeMedium).copyWith(bottom: Dimensions.paddingSizeExtraSmall),
+                    padding: const EdgeInsets.all(Dimensions.paddingSizeMedium),
                     decoration: BoxDecoration(
                       color: Theme.of(context).cardColor,
                       boxShadow: [BoxShadow(
                         offset: const Offset(0, 3),
                         blurRadius: 8,
-                        color: Theme.of(context).primaryColor.withValues(alpha: 0.08),
+                        color: Theme.of(context).primaryColor.withOpacity(0.08),
                       )],
                     ),
                     child: Column(children: [
-                      _InformationTitleWidget(title: getTranslated('variation', context)!),
-                      const SizedBox(height: Dimensions.paddingSizeExtraSmall),
+                      _InformationTitleWidget(title: getTranslated('general_information', context)!),
+                      const SizedBox(height: Dimensions.paddingSizeMedium),
 
-                      if((widget.productModel?.variation?.isNotEmpty ?? false))
-                        ListView.separated(
-                          padding: EdgeInsets.zero,
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemBuilder: (context, index){
-                            return _VariationWidget(physicalProduct: widget.productModel!.variation![index], productModel: widget.productModel);
-                          },
-                          separatorBuilder: (context, index) => Divider(height: 1, color: Theme.of(context).hintColor.withValues(alpha: 0.3), thickness: 1),
-                          itemCount: widget.productModel!.variation!.length,
-                        ),
+                      if( widget.productModel!.productType == 'physical')
+                        _InformationElementWidget(labelText: getTranslated('brand', context)!, infoText: widget.productModel?.brand?.name ?? ''),
 
-                      if((widget.productModel?.digitalVariation?.isNotEmpty ?? false))
-                        ListView.separated(
-                          padding: EdgeInsets.zero,
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemBuilder: (context, index){
-                            return _VariationWidget(digitalProduct: widget.productModel!.digitalVariation![index], productModel: widget.productModel, index: index);
-                          },
-                          separatorBuilder: (context, index) => Divider(height: 1, color: Theme.of(context).hintColor.withValues(alpha: 0.3), thickness: 1),
-                          itemCount: widget.productModel!.digitalVariation!.length,
-                        ),
+                      _InformationElementWidget(labelText: getTranslated('category', context)!, infoText: widget.productModel?.category?.name ?? ''),
+
+                      _InformationElementWidget(labelText: getTranslated('product_type', context)!, infoText: widget.productModel?.productType ?? ''),
+
+                      widget.productModel!.productType == 'physical' ?
+                      _InformationElementWidget(labelText: getTranslated('product_unit', context)!, infoText: widget.productModel?.unit ?? '') : const SizedBox(),
+
+                      widget.productModel!.productType == 'physical' ?
+                      _InformationElementWidget(
+                        labelText: getTranslated('current_stock', context)!,
+                        infoText: widget.productModel?.currentStock.toString() ?? '',
+                      ) : const SizedBox(),
+
+                      _InformationElementWidget(
+                        labelText: getTranslated('product_sku', context)!,
+                        infoText: widget.productModel?.code ?? '',
+                        showDivider: false,
+                      ),
                     ]),
                   ),
                   const SizedBox(height: Dimensions.paddingSizeExtraSmall),
-                ],
 
 
-                /// Description
-                (widget.productModel?.details != null && widget.productModel!.details!.isNotEmpty) ?
-                Container(
-                  padding: const EdgeInsets.only(top: Dimensions.paddingSizeMedium),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).cardColor,
-                    boxShadow: [BoxShadow(
-                      offset: const Offset(0, 3),
-                      blurRadius: 8,
-                      color: Theme.of(context).primaryColor.withValues(alpha: 0.08),
-                    )],
+                  /// Price Information
+                  Container(
+                    padding: const EdgeInsets.all(Dimensions.paddingSizeMedium),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).cardColor,
+                      boxShadow: [BoxShadow(
+                        offset: const Offset(0, 3),
+                        blurRadius: 8,
+                        color: Theme.of(context).primaryColor.withOpacity(0.08),
+                      )],
+                    ),
+                    child: Column(children: [
+                      _InformationTitleWidget(title: getTranslated('price_information', context)!),
+                      const SizedBox(height: Dimensions.paddingSizeMedium),
+
+                      _InformationElementWidget(
+                        labelText: getTranslated('unit_price', context)!,
+                        infoText: widget.productModel?.unitPrice?.toStringAsFixed(2) ?? '',
+                        valueWithSign: true,
+                      ),
+
+                      _InformationElementWidget(
+                        labelText: getTranslated('tax', context)!,
+                        infoText: widget.productModel?.tax?.toStringAsFixed(2) ?? '',
+                        isPercentage: true,
+                      ),
+
+                      widget.productModel!.productType == 'physical'?
+                      _InformationElementWidget(
+                        labelText: getTranslated('shipping_cost', context)!,
+                        infoText:  PriceConverter.convertPrice(context,  double.tryParse(widget.productModel?.shippingCost.toString() ?? '') ?? 0)  ,
+                      ) : const SizedBox(),
+
+                      isClearanceSaleActive ?
+                      _InformationElementWidget(
+                        labelText: getTranslated('discount', context)!,
+                        infoText: widget.productModel!.clearanceSale!.discountType == 'percentage'? widget.productModel!.clearanceSale!.discountAmount.toString() : '0',
+                        showDivider: false,
+                        isPercentage: widget.productModel!.clearanceSale!.discountType == 'percentage',
+                        valueWithSign: widget.productModel!.clearanceSale!.discountType == 'flat',
+                      ) :
+                      _InformationElementWidget(
+                        labelText: getTranslated('discount', context)!,
+                        infoText: widget.productModel!.discountType == 'percent'? widget.productModel!.discount.toString() : widget.productModel!.discount.toString(),
+                        valueWithSign : widget.productModel!.discountType == 'flat',
+                        isPercentage: widget.productModel!.discountType == 'percent',
+                        showDivider: false,
+                      ),
+                    ]),
                   ),
-                  child: Column(children: [
+                  const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeMedium),
-                      child: _InformationTitleWidget(title: getTranslated('description', context)!),
+                  /// Variation
+                  if((widget.productModel?.variation?.isNotEmpty ?? false) || (widget.productModel?.digitalVariation?.isNotEmpty ?? false)) ...[
+                    Container(
+                      padding: const EdgeInsets.all(Dimensions.paddingSizeMedium).copyWith(bottom: Dimensions.paddingSizeExtraSmall),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).cardColor,
+                        boxShadow: [BoxShadow(
+                          offset: const Offset(0, 3),
+                          blurRadius: 8,
+                          color: Theme.of(context).primaryColor.withOpacity(0.08),
+                        )],
+                      ),
+                      child: Column(children: [
+                        _InformationTitleWidget(title: getTranslated('variation', context)!),
+                        const SizedBox(height: Dimensions.paddingSizeExtraSmall),
+
+                        if((widget.productModel?.variation?.isNotEmpty ?? false))
+                          ListView.separated(
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemBuilder: (context, index){
+                              return _VariationWidget(physicalProduct: widget.productModel!.variation![index], productModel: widget.productModel);
+                            },
+                            separatorBuilder: (context, index) => Divider(height: 1, color: Theme.of(context).hintColor.withOpacity(0.3), thickness: 1),
+                            itemCount: widget.productModel!.variation!.length,
+                          ),
+
+                        if((widget.productModel?.digitalVariation?.isNotEmpty ?? false))
+                          ListView.separated(
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemBuilder: (context, index){
+                              return _VariationWidget(digitalProduct: widget.productModel!.digitalVariation![index], productModel: widget.productModel, index: index);
+                            },
+                            separatorBuilder: (context, index) => Divider(height: 1, color: Theme.of(context).hintColor.withOpacity(0.3), thickness: 1),
+                            itemCount: widget.productModel!.digitalVariation!.length,
+                          ),
+                      ]),
                     ),
                     const SizedBox(height: Dimensions.paddingSizeExtraSmall),
+                  ],
 
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: Dimensions.paddingSizeExtraSmall),
-                      child: Html(
-                        data: widget.productModel?.details ?? '',
-                        style: {
-                          "body": Style(
-                            color: Theme.of(context).textTheme.bodyLarge?.color,
-                            fontSize: FontSize.medium,
-                          ),
-                          "table": Style(
-                            backgroundColor: const Color.fromARGB(0x50, 0xee, 0xee, 0xee),
-                            padding: HtmlPaddings.zero,
-                            margin: Margins.zero,
-                          ),
-                          "tr": Style(
-                            border: const Border(bottom: BorderSide(color: Colors.grey)),
-                          ),
-                          "th": Style(
-                            padding: HtmlPaddings.all(6),
-                            backgroundColor: Colors.grey,
-                            margin: Margins.zero,
-                          ),
-                          "td": Style(
-                            padding: HtmlPaddings.all(6),
-                            alignment: Alignment.topLeft,
-                            margin: Margins.zero,
-                          ),
-                          "p": Style(
-                            color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.80),
-                            fontSize: FontSize(Dimensions.fontSizeSmall),
-                            fontWeight: FontWeight.w400,
-                          ),
-                        },
-                      ),
+
+                  /// Description
+                  (widget.productModel?.details != null && widget.productModel!.details!.isNotEmpty) ?
+                  Container(
+                    padding: const EdgeInsets.only(top: Dimensions.paddingSizeMedium),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).cardColor,
+                      boxShadow: [BoxShadow(
+                        offset: const Offset(0, 3),
+                        blurRadius: 8,
+                        color: Theme.of(context).primaryColor.withOpacity(0.08),
+                      )],
                     ),
-                  ]),
-                ) : const SizedBox(),
-              ]),
-            )),
+                    child: Column(children: [
 
-            Container(
-              height: 70,
-              decoration: BoxDecoration(
-                color: Theme.of(context).cardColor,
-                boxShadow: ThemeShadow.getShadow(context),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeMedium),
+                        child: _InformationTitleWidget(title: getTranslated('description', context)!),
+                      ),
+                      const SizedBox(height: Dimensions.paddingSizeExtraSmall),
+
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: Dimensions.paddingSizeExtraSmall),
+                        child: Html(
+                          data: widget.productModel?.details ?? '',
+                          style: {
+                            "body": Style(
+                              color: Theme.of(context).textTheme.bodyLarge?.color,
+                              fontSize: FontSize.medium,
+                            ),
+                            "table": Style(
+                              backgroundColor: const Color.fromARGB(0x50, 0xee, 0xee, 0xee),
+                              padding: HtmlPaddings.zero,
+                              margin: Margins.zero,
+                            ),
+                            "tr": Style(
+                              border: const Border(bottom: BorderSide(color: Colors.grey)),
+                            ),
+                            "th": Style(
+                              padding: HtmlPaddings.all(6),
+                              backgroundColor: Colors.grey,
+                              margin: Margins.zero,
+                            ),
+                            "td": Style(
+                              padding: HtmlPaddings.all(6),
+                              alignment: Alignment.topLeft,
+                              margin: Margins.zero,
+                            ),
+                            "p": Style(
+                              color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.80),
+                              fontSize: FontSize(Dimensions.fontSizeSmall),
+                              fontWeight: FontWeight.w400,
+                            ),
+                          },
+                        ),
+                      ),
+                    ]),
+                  ) : const SizedBox(),
+                ]),
+              )),
+
+              Container(
+                height: 70,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).cardColor,
+                  boxShadow: ThemeShadow.getShadow(context),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: Dimensions.fontSizeSmall,vertical: Dimensions.paddingSizeSmall),
+                child: CustomButtonWidget(
+                  borderRadius: Dimensions.paddingSizeSmall,
+                  btnTxt: getTranslated('edit_product', context),
+                  backgroundColor: Theme.of(context).primaryColor,
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_)=> AddProductScreen(product: widget.productModel))),
+                ),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: Dimensions.fontSizeSmall,vertical: Dimensions.paddingSizeSmall),
-              child: CustomButtonWidget(
-                borderRadius: Dimensions.paddingSizeSmall,
-                btnTxt: getTranslated('edit_product', context),
-                backgroundColor: Theme.of(context).primaryColor,
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_)=> AddProductScreen(product: widget.productModel))),
-              ),
-            ),
-          ]),
-        );
-      }
+            ]),
+          );
+        }
     );
   }
 }
@@ -289,6 +289,7 @@ class _InformationTitleWidget extends StatelessWidget {
   final TextStyle? titleTextStyle;
   final Color? backgroundColor;
   const _InformationTitleWidget({
+    super.key,
     required this.title,
     this.titleTextStyle,
     this.backgroundColor,
@@ -300,7 +301,7 @@ class _InformationTitleWidget extends StatelessWidget {
     return Container(
       width: widthSize,
       padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall, vertical: Dimensions.paddingSizeExtraSmall),
-      color: Theme.of(context).primaryColor.withValues(alpha: 0.125),
+      color: Theme.of(context).primaryColor.withOpacity(0.125),
       child: Text(title, style: robotoBold.copyWith(fontSize: Dimensions.fontSizeSmall, color: Theme.of(context).textTheme.bodyLarge?.color)),
     );
   }
@@ -318,10 +319,11 @@ class _InformationElementWidget extends StatelessWidget {
   final bool isPercentage;
 
   const _InformationElementWidget({
+    super.key,
     required this.labelText,
     required this.infoText,
-    this.labelFlex = 4,
-    this.infoFlex = 6,
+    this.labelFlex = 1,
+    this.infoFlex = 1,
     this.labelTextStyle,
     this.infoTextStyle,
     this.showDivider = true,
@@ -335,17 +337,17 @@ class _InformationElementWidget extends StatelessWidget {
       Row(children: [
         Expanded(flex: labelFlex, child: Text(labelText, style: labelTextStyle ?? robotoRegular.copyWith(
           fontSize: Dimensions.fontSizeSmall,
-          color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.80),
+          color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.80),
         ), overflow: TextOverflow.ellipsis, maxLines: 1, textAlign: TextAlign.start)),
 
         Expanded(flex: infoFlex, child: valueWithSign ?
-        Text(PriceConverter.convertPrice(context, double.parse(infoText)), style: robotoRegular.copyWith(
+        Text(PriceConverter.convertPrice(context, double.tryParse(infoText) ?? 0), style: robotoRegular.copyWith(
           fontSize: Dimensions.fontSizeSmall,
-          color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.80),
+          color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.80),
         )) :
         Text('$infoText${isPercentage ? "%" : ''}', style: infoTextStyle ?? robotoRegular.copyWith(
           fontSize: Dimensions.fontSizeSmall,
-          color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.80),
+          color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.80),
         ), overflow: TextOverflow.ellipsis, maxLines: 1, textAlign: TextAlign.start)),
 
       ]),
@@ -353,7 +355,7 @@ class _InformationElementWidget extends StatelessWidget {
       if(showDivider) ...[
         const SizedBox(height: Dimensions.paddingSizeSmall),
 
-        Divider(height: 1, color: Theme.of(context).hintColor.withValues(alpha: 0.3), thickness: 1),
+        Divider(height: 1, color: Theme.of(context).hintColor.withOpacity(0.3), thickness: 1),
         const SizedBox(height: Dimensions.paddingSizeSmall),
       ]
 
@@ -376,7 +378,7 @@ class _ProductWidget extends StatelessWidget {
         boxShadow: [BoxShadow(
           offset: const Offset(0, 3),
           blurRadius: 8,
-          color: Theme.of(context).primaryColor.withValues(alpha: 0.08),
+          color: Theme.of(context).primaryColor.withOpacity(0.08),
         )],
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -387,7 +389,7 @@ class _ProductWidget extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(Dimensions.paddingEye),
-                  border: Border.all(color: Colors.black.withValues(alpha: 0.05), width: 1)
+                  border: Border.all(color: Colors.black.withOpacity(0.05), width: 1)
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(Dimensions.paddingEye),
@@ -424,7 +426,7 @@ class _ProductWidget extends StatelessWidget {
                 ),
 
 
-                if(productModel?.digitalProductType == 'ready_product' && productModel?.digitalFileReady != null && productModel!.digitalVariation!.isEmpty)
+                if(productModel?.digitalProductType == 'ready_product' && productModel?.digitalFileReady != null && (productModel!.digitalVariation == null || productModel!.digitalVariation!.isEmpty))
                   Consumer<OrderDetailsController>(
                       builder: (context, orderDetails, _) {
                         return InkWell(
@@ -434,7 +436,7 @@ class _ProductWidget extends StatelessWidget {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
-                              border: Border.all(color: Theme.of(context).primaryColor.withValues(alpha:0.15)),
+                              border: Border.all(color: Theme.of(context).primaryColor.withOpacity(0.15)),
                             ),
                             padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
                             child:  (orderDetails.isDownloadLoading &&  orderDetails.downloadIndex == 1)  ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator()) :
@@ -452,12 +454,12 @@ class _ProductWidget extends StatelessWidget {
             Row(children: [
               Text(
                 PriceConverter.convertPrice(context, productModel!.unitPrice,
-                  discountType: (productModel?.clearanceSale?.discountAmount ?? 0) > 0
-                    ? productModel?.clearanceSale?.discountType
-                    : productModel?.discountType,
-                  discount: (productModel?.clearanceSale?.discountAmount ?? 0) > 0
-                    ? productModel?.clearanceSale?.discountAmount
-                    : productModel?.discount
+                    discountType: (productModel?.clearanceSale?.discountAmount ?? 0) > 0
+                        ? productModel?.clearanceSale?.discountType
+                        : productModel?.discountType,
+                    discount: (productModel?.clearanceSale?.discountAmount ?? 0) > 0
+                        ? productModel?.clearanceSale?.discountAmount
+                        : productModel?.discount
                 ),
                 style: robotoMedium.copyWith(color: Theme.of(context).primaryColor),
               ),
@@ -476,23 +478,23 @@ class _ProductWidget extends StatelessWidget {
             const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
             Container(
-                padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraSmall, vertical: Dimensions.paddingSizeVeryTiny),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(Dimensions.paddingSizeOrder),
-                    color: productModel!.requestStatus == 0?
-                    ColorHelper.blendColors(Colors.white, Theme.of(context).colorScheme.outline, 0.2) :
-                    productModel!.requestStatus == 1 ? ColorHelper.blendColors(Colors.white, Theme.of(context).colorScheme.onTertiaryContainer, 0.2) :
-                    ColorHelper.blendColors(Colors.white, Theme.of(context).colorScheme.error, 0.2),
-                ),
-                child: Text(productModel!.requestStatus == 0 ? '${getTranslated('new_request', context)}' :
-                productModel!.requestStatus == 1? '${getTranslated('approved', context)}' : '${getTranslated('denied', context)}',
-                    style: robotoRegular.copyWith(
-                        color: productModel!.requestStatus == 0 ?
-                        Theme.of(context).colorScheme.outline : productModel!.requestStatus == 1
-                            ? Theme.of(context).colorScheme.onTertiaryContainer : Theme.of(context).colorScheme.error,
-                        fontSize: Dimensions.fontSizeSmall
-                    ),
-                    maxLines: 1, overflow: TextOverflow.ellipsis),
+              padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraSmall, vertical: Dimensions.paddingSizeVeryTiny),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(Dimensions.paddingSizeOrder),
+                color: productModel!.requestStatus == 0?
+                Theme.of(context).colorScheme.outline.withOpacity(0.2) :
+                productModel!.requestStatus == 1 ? Theme.of(context).colorScheme.onTertiaryContainer.withOpacity(0.2) :
+                Theme.of(context).colorScheme.error.withOpacity(0.2),
+              ),
+              child: Text(productModel!.requestStatus == 0 ? '${getTranslated('new_request', context)}' :
+              productModel!.requestStatus == 1? '${getTranslated('approved', context)}' : '${getTranslated('denied', context)}',
+                  style: robotoRegular.copyWith(
+                      color: productModel!.requestStatus == 0 ?
+                      Theme.of(context).colorScheme.outline : productModel!.requestStatus == 1
+                          ? Theme.of(context).colorScheme.onTertiaryContainer : Theme.of(context).colorScheme.error,
+                      fontSize: Dimensions.fontSizeSmall
+                  ),
+                  maxLines: 1, overflow: TextOverflow.ellipsis),
             ),
             const SizedBox(height: Dimensions.paddingEye),
 
@@ -547,7 +549,7 @@ class _ProductImageWidget extends StatelessWidget {
           decoration: BoxDecoration(
               color: Theme.of(context).cardColor,
               borderRadius: BorderRadius.circular(Dimensions.paddingEye),
-              border: Border.all(color: Colors.black.withValues(alpha: 0.05), width: 1)
+              border: Border.all(color: Colors.black.withOpacity(0.05), width: 1)
           ),
           width: Dimensions.paddingSizeRevenueBottom,
           child: ClipRRect(
@@ -609,9 +611,9 @@ class _VariationWidgetState extends State<_VariationWidget> {
 
     FlutterDownloader.registerCallback(downloadCallback);
 
-    super.initState();
   }
 
+  @pragma('vm:entry-point')
   static void downloadCallback(String id, int status, int progress) {
     final SendPort? send = IsolateNameServer.lookupPortByName('downloader_send_port');
     send?.send([id, status, progress]);
@@ -627,26 +629,26 @@ class _VariationWidgetState extends State<_VariationWidget> {
 
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Flexible(child: Text(widget.physicalProduct?.type ?? '', style: robotoMedium.copyWith(
-            fontSize: Dimensions.fontSizeSmall,
-            color: Theme.of(context).textTheme.bodyLarge?.color
+              fontSize: Dimensions.fontSizeSmall,
+              color: Theme.of(context).textTheme.bodyLarge?.color
           ),maxLines: 1, overflow: TextOverflow.ellipsis)),
           const SizedBox(width: Dimensions.paddingSizeDefault),
 
           Text(getTranslated('stock', context)!, style: robotoMedium.copyWith(
-              fontSize: Dimensions.fontSizeSmall,
-              color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.6),
+            fontSize: Dimensions.fontSizeSmall,
+            color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6),
           )),
         ]),
         const SizedBox(height: Dimensions.paddingSizeExtraSmall),
 
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Flexible(child: Text(
-            PriceConverter.convertPrice(context, widget.physicalProduct?.price),
+              PriceConverter.convertPrice(context, widget.physicalProduct?.price),
 
-            style: robotoMedium.copyWith(
-            fontSize: Dimensions.fontSizeSmall,
-            color: Theme.of(context).textTheme.bodyLarge?.color?.withValues(alpha: 0.6)
-          ),maxLines: 1, overflow: TextOverflow.ellipsis)),
+              style: robotoMedium.copyWith(
+                  fontSize: Dimensions.fontSizeSmall,
+                  color: Theme.of(context).textTheme.bodyLarge?.color?.withOpacity(0.6)
+              ),maxLines: 1, overflow: TextOverflow.ellipsis)),
           const SizedBox(width: Dimensions.paddingSizeDefault),
 
           Text(widget.physicalProduct?.qty.toString() ?? '0', style: robotoMedium.copyWith(
@@ -656,58 +658,57 @@ class _VariationWidgetState extends State<_VariationWidget> {
         ])
       ]) :
       Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        // productModel.digitalProductType == 'ready_product'
 
         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(widget.digitalProduct?.variantKey ?? '', style: robotoMedium.copyWith(
-                fontSize: Dimensions.fontSizeSmall,
-                color: Theme.of(context).textTheme.bodyLarge?.color
-            ),maxLines: 1, overflow: TextOverflow.ellipsis),
+          Text(widget.digitalProduct?.variantKey ?? '', style: robotoMedium.copyWith(
+              fontSize: Dimensions.fontSizeSmall,
+              color: Theme.of(context).textTheme.bodyLarge?.color
+          ),maxLines: 1, overflow: TextOverflow.ellipsis),
 
-            if(widget.productModel?.digitalProductType == 'ready_product')...[
-              const SizedBox(height: Dimensions.paddingSizeSmall),
+          if(widget.productModel?.digitalProductType == 'ready_product')...[
+            const SizedBox(height: Dimensions.paddingSizeSmall),
 
-              Text(PriceConverter.convertPrice(context, widget.digitalProduct?.price),
+            Text(PriceConverter.convertPrice(context, widget.digitalProduct?.price),
                 style: robotoMedium.copyWith(
                   fontSize: Dimensions.fontSizeSmall,
                   color: Theme.of(context).textTheme.bodyLarge?.color,
                 )
-              ),
-            ]
-          ],
+            ),
+          ]
+        ],
         ),
 
 
         if(widget.productModel?.digitalProductType != 'ready_product')...[
           const SizedBox(width: Dimensions.paddingSizeDefault),
           Text(PriceConverter.convertPrice(context, widget.digitalProduct?.price),
-            style: robotoMedium.copyWith(
-              fontSize: Dimensions.fontSizeSmall,
-              color: Theme.of(context).textTheme.bodyLarge?.color,
-            )
+              style: robotoMedium.copyWith(
+                fontSize: Dimensions.fontSizeSmall,
+                color: Theme.of(context).textTheme.bodyLarge?.color,
+              )
           ),
         ],
 
 
         if(widget.productModel?.digitalProductType == 'ready_product')
-        Consumer<OrderDetailsController>(
-          builder: (context, orderDetails, _) {
-            return InkWell(
-              onTap: () {
-                _downloadProduct(widget.index!, widget.digitalProduct!);
-              },
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
-                  border: Border.all(color: Theme.of(context).primaryColor.withValues(alpha:0.15)),
-                ),
-                padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
-                child:  (orderDetails.isDownloadLoading &&  orderDetails.downloadIndex == widget.index)  ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator()) :
-                Image.asset(Images.downloadIcon, height: 15, width: 15),
-              ),
-            );
-          }
-        ),
+          Consumer<OrderDetailsController>(
+              builder: (context, orderDetails, _) {
+                return InkWell(
+                  onTap: () {
+                    _downloadProduct(widget.index!, widget.digitalProduct!);
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(Dimensions.radiusDefault),
+                      border: Border.all(color: Theme.of(context).primaryColor.withOpacity(0.15)),
+                    ),
+                    padding: const EdgeInsets.all(Dimensions.paddingSizeSmall),
+                    child:  (orderDetails.isDownloadLoading &&  orderDetails.downloadIndex == widget.index)  ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator()) :
+                    Image.asset(Images.downloadIcon, height: 15, width: 15),
+                  ),
+                );
+              }
+          ),
 
 
       ]),
@@ -720,12 +721,10 @@ class _VariationWidgetState extends State<_VariationWidget> {
     String filename = digitalProduct.file ?? '';
 
     Provider.of<OrderDetailsController>(context, listen: false).productDownload(
-      url: url,
-      fileName: filename,
-      index: index
+        url: url,
+        fileName: filename,
+        index: index
     );
   }
 
 }
-
-

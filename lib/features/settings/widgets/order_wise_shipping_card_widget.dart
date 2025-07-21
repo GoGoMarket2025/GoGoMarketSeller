@@ -17,7 +17,7 @@ class OrderWiseShippingCardWidget extends StatelessWidget {
   final ShippingController? shipProv;
   final ShippingModel? shippingModel;
   final int? index;
-  const OrderWiseShippingCardWidget({Key? key, this.shipProv, this.shippingModel, this.index}) : super(key: key);
+  const OrderWiseShippingCardWidget({super.key, this.shipProv, this.shippingModel, this.index});
 
   @override
   Widget build(BuildContext context) {

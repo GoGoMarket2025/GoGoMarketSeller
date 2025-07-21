@@ -12,7 +12,7 @@ class WithdrawCardWidget extends StatelessWidget {
   final Withdraws? withdraw;
   final int? index;
   final bool isDetails;
-  const WithdrawCardWidget({Key? key, this.withdraw, this.index, this.isDetails = false}) : super(key: key);
+  const WithdrawCardWidget({super.key, this.withdraw, this.index, this.isDetails = false});
 
   @override
   Widget build(BuildContext context) {

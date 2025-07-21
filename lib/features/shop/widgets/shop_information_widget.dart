@@ -16,7 +16,7 @@ import 'package:sixvalley_vendor_app/features/shop/screens/shop_update_screen.da
 
 class ShopInformationWidget extends StatelessWidget {
   final ShopController? resProvider;
-  const ShopInformationWidget({Key? key, this.resProvider}) : super(key: key);
+  const ShopInformationWidget({super.key, this.resProvider});
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +124,7 @@ class ShopInfoMenu extends StatelessWidget {
   final String title;
   final String icon;
   final bool ratting;
-  const ShopInfoMenu({Key? key, required this.count, required this.title, required this.icon,  this.ratting = false}) : super(key: key);
+  const ShopInfoMenu({super.key, required this.count, required this.title, required this.icon,  this.ratting = false});
 
   @override
   Widget build(BuildContext context) {

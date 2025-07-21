@@ -22,7 +22,7 @@ import 'package:sixvalley_vendor_app/features/coupon/widgets/coupon_details_dial
 class CouponCardWidget extends StatelessWidget {
   final Coupons? coupons;
   final int? index;
-  const CouponCardWidget({Key? key, this.coupons, this.index,}) : super(key: key);
+  const CouponCardWidget({super.key, this.coupons, this.index,});
 
   @override
   Widget build(BuildContext context) {

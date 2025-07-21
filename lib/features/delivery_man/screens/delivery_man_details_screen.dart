@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/screens/delivery_man_
 
 class DeliveryManDetailsScreen extends StatefulWidget {
   final DeliveryMan? deliveryMan;
-  const DeliveryManDetailsScreen({Key? key, this.deliveryMan}) : super(key: key);
+  const DeliveryManDetailsScreen({super.key, this.deliveryMan});
   @override
   State<DeliveryManDetailsScreen> createState() => _DeliveryManDetailsScreenState();
 }

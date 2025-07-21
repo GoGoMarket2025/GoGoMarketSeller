@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/features/menu/widgets/menu_widget.dart';
 
 
 class NavBarScreen extends StatefulWidget {
-  const NavBarScreen({Key? key}) : super(key: key);
+  const NavBarScreen({super.key});
 
   @override
   State<NavBarScreen> createState() => _NavBarScreenState();

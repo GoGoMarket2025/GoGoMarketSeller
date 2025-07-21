@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/features/pos/widgets/pos_product_shimmer_wi
 import 'package:sixvalley_vendor_app/features/pos/widgets/product_search_dialog_widget.dart';
 
 class POSProductScreen extends StatefulWidget {
-  const POSProductScreen({Key? key}) : super(key: key);
+  const POSProductScreen({super.key});
 
   @override
   State<POSProductScreen> createState() => _POSProductScreenState();

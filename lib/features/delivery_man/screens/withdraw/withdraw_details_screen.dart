@@ -15,7 +15,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/screens/withdraw/with
 class WithdrawDetailsScreen extends StatefulWidget {
   final Withdraws? withdraw;
   final int? index;
-  const WithdrawDetailsScreen({Key? key, this.withdraw, this.index}) : super(key: key);
+  const WithdrawDetailsScreen({super.key, this.withdraw, this.index});
 
   @override
   State<WithdrawDetailsScreen> createState() => _WithdrawDetailsScreenState();
@@ -175,7 +175,7 @@ class _WithdrawDetailsScreenState extends State<WithdrawDetailsScreen> {
 class InfoItem extends StatelessWidget {
   final String? icon;
   final String? title;
-  const InfoItem({Key? key, this.icon, this.title}) : super(key: key);
+  const InfoItem({super.key, this.icon, this.title});
 
   @override
   Widget build(BuildContext context) {

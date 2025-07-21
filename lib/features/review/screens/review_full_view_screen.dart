@@ -11,7 +11,7 @@ class ReviewFullViewScreen extends StatelessWidget {
   final ReviewModel? reviewModel;
   final bool? isDetails;
   final int? index;
-  const ReviewFullViewScreen({Key? key, this.reviewModel, this.isDetails, this.index}) : super(key: key);
+  const ReviewFullViewScreen({super.key, this.reviewModel, this.isDetails, this.index});
 
   @override
   Widget build(BuildContext context) {

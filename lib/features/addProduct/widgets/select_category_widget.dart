@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class SelectCategoryWidget extends StatefulWidget {
   final Product? product;
-  const SelectCategoryWidget({Key? key, required this.product}) : super(key: key);
+  const SelectCategoryWidget({super.key, required this.product});
 
   @override
   SelectCategoryWidgetState createState() => SelectCategoryWidgetState();

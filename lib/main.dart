@@ -141,7 +141,7 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   final NotificationBody? body;
-  const MyApp({Key? key, this.body}) : super(key: key);
+  const MyApp({super.key, this.body});
 
 
   @override

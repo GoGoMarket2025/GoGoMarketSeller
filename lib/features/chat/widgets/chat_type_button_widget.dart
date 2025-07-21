@@ -9,7 +9,7 @@ class ChatTypeButtonWidget extends StatelessWidget {
   final String? text;
   final int index;
   final Function? onPressEvent;
-  const ChatTypeButtonWidget({Key? key, required this.text, required this.index, this.onPressEvent}) : super(key: key);
+  const ChatTypeButtonWidget({super.key, required this.text, required this.index, this.onPressEvent});
 
   @override
   Widget build(BuildContext context) {

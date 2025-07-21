@@ -12,7 +12,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class CustomerInfoWidget extends StatelessWidget {
   final RefundModel? refundModel;
-  const CustomerInfoWidget({Key? key, this.refundModel}) : super(key: key);
+  const CustomerInfoWidget({super.key, this.refundModel});
 
   @override
   Widget build(BuildContext context) {

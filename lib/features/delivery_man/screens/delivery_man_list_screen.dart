@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_search_field_widg
 import 'package:sixvalley_vendor_app/features/delivery_man/widgets/delivery_man_list_view_widget.dart';
 
 class DeliveryManListScreen extends StatefulWidget {
-  const DeliveryManListScreen({Key? key}) : super(key: key);
+  const DeliveryManListScreen({super.key});
 
   @override
   State<DeliveryManListScreen> createState() => _DeliveryManListScreenState();

@@ -18,24 +18,24 @@ class BottomMenuController extends ChangeNotifier{
   Widget _currentScreen = const PosScreen();
   Widget get currentScreen => _currentScreen;
 
-  resetNavBar(){
+  void resetNavBar(){
     _currentScreen = const PosScreen();
     _currentTab = 0;
   }
 
-  selectHomePage() {
+  void selectHomePage() {
     _currentScreen = const PosScreen();
     _currentTab = 0;
     notifyListeners();
   }
 
-  selectPosScreen() {
+  void selectPosScreen() {
     _currentScreen = const OrderScreen();
     _currentTab = 1;
     notifyListeners();
   }
 
-  selectItemsScreen() {
+  void selectItemsScreen() {
     _currentScreen = const POSProductScreen();
     _currentTab = 2;
     notifyListeners();

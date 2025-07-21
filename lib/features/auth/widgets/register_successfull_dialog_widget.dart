@@ -6,7 +6,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/features/auth/screens/auth_screen.dart';
 
 class RegisterSuccessfulWidget extends StatelessWidget {
-  const RegisterSuccessfulWidget({Key? key}) : super(key: key);
+  const RegisterSuccessfulWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

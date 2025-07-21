@@ -26,7 +26,7 @@ class OrderedProductListItemWidget extends StatefulWidget {
   final int? orderId;
   final int? index;
   final int? length;
-  const OrderedProductListItemWidget({Key? key, this.orderDetailsModel, this.paymentStatus, this.orderModel, this.orderId, this.index, this.length}) : super(key: key);
+  const OrderedProductListItemWidget({super.key, this.orderDetailsModel, this.paymentStatus, this.orderModel, this.orderId, this.index, this.length});
 
   @override
   State<OrderedProductListItemWidget> createState() => _OrderedProductListItemWidgetState();

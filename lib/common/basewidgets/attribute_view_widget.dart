@@ -18,7 +18,7 @@ class AttributeViewWidget extends StatefulWidget {
   final Product? product;
   final bool colorOn;
   final bool onlyQuantity;
-  const AttributeViewWidget({Key? key, required this.product, required this.colorOn, this.onlyQuantity = false}) : super(key: key);
+  const AttributeViewWidget({super.key, required this.product, required this.colorOn, this.onlyQuantity = false});
   @override
   State<AttributeViewWidget> createState() => _AttributeViewWidgetState();
 }

@@ -16,7 +16,7 @@ class ShippingAndBillingWidget extends StatelessWidget {
   final Order? orderModel;
   final bool? onlyDigital;
   final String orderType;
-  const ShippingAndBillingWidget({Key? key, this.orderModel, this.onlyDigital, required this.orderType}) : super(key: key);
+  const ShippingAndBillingWidget({super.key, this.orderModel, this.onlyDigital, required this.orderType});
 
   @override
   Widget build(BuildContext context) {

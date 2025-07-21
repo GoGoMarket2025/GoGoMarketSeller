@@ -16,7 +16,7 @@ import '../../../theme/controllers/theme_controller.dart';
 class RefundScreen extends StatelessWidget {
   final bool isBacButtonExist;
   final bool fromNotification;
-  const RefundScreen({Key? key, this.isBacButtonExist = false, required this.fromNotification}) : super(key: key);
+  const RefundScreen({super.key, this.isBacButtonExist = false, required this.fromNotification});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ class RefundScreen extends StatelessWidget {
 }
 
 class OrderShimmer extends StatelessWidget {
-  const OrderShimmer({Key? key}) : super(key: key);
+  const OrderShimmer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -148,7 +148,7 @@ class RefundTypeButton extends StatelessWidget {
   final String? text;
   final int index;
   final List<RefundModel>? refundList;
-  const RefundTypeButton({Key? key, required this.text, required this.index, required this.refundList}) : super(key: key);
+  const RefundTypeButton({super.key, required this.text, required this.index, required this.refundList});
 
   @override
   Widget build(BuildContext context) {

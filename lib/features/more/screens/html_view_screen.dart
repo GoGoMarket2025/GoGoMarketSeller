@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_app_bar_widget.da
 
 class HtmlViewScreen extends StatelessWidget {
   final BusinessPageModel? page;
-  const HtmlViewScreen({Key? key, required this.page}) : super(key: key);
+  const HtmlViewScreen({super.key, required this.page});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -16,7 +16,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_app_bar_widget.da
 import 'package:sixvalley_vendor_app/common/basewidgets/custom_snackbar_widget.dart';
 
 class RegistrationScreen extends StatefulWidget {
-  const RegistrationScreen({Key? key}) : super(key: key);
+  const RegistrationScreen({super.key});
 
   @override
   State<RegistrationScreen> createState() => _RegistrationScreenState();

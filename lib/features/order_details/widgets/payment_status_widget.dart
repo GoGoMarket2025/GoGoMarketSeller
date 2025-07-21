@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/features/addProduct/screens/add_product_scr
 class PaymentStatusWidget extends StatefulWidget {
   final Order? orderModel;
   final OrderController? order;
-  const PaymentStatusWidget({Key? key, this.orderModel, this.order}) : super(key: key);
+  const PaymentStatusWidget({super.key, this.orderModel, this.order});
 
   @override
   State<PaymentStatusWidget> createState() => _PaymentStatusWidgetState();
@@ -97,7 +97,7 @@ class _PaymentStatusWidgetState extends State<PaymentStatusWidget> {
 class PaymentItemCard extends StatelessWidget {
   final String leftValue;
   final String rightValue;
-  const PaymentItemCard({Key? key, required this.leftValue, required this.rightValue}) : super(key: key);
+  const PaymentItemCard({super.key, required this.leftValue, required this.rightValue});
 
   @override
   Widget build(BuildContext context) {

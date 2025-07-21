@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/features/auth/screens/login_screen.dart';
 
 
 class AuthScreen extends StatelessWidget{
-  const AuthScreen({Key? key}) : super(key: key);
+  const AuthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

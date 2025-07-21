@@ -11,7 +11,7 @@ class InfoItemWidget extends StatelessWidget {
   final String? title;
   final String? amount;
   final bool isMoney;
-  const InfoItemWidget({Key? key, this.icon, this.title, this.amount, this.isMoney = false}) : super(key: key);
+  const InfoItemWidget({super.key, this.icon, this.title, this.amount, this.isMoney = false});
 
   @override
   Widget build(BuildContext context) {

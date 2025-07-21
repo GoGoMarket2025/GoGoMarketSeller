@@ -6,7 +6,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_app_bar_widget.da
 import 'package:sixvalley_vendor_app/features/delivery_man/widgets/top_delivery_man_view_widget.dart';
 
 class TopDeliveryMAnScreen extends StatelessWidget {
-  const TopDeliveryMAnScreen({Key? key}) : super(key: key);
+  const TopDeliveryMAnScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

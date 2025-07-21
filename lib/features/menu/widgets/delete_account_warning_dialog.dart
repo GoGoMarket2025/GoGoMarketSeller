@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class DeleteAccountWarningDialogWidget extends StatelessWidget {
-const DeleteAccountWarningDialogWidget({Key? key}) : super(key: key);
+const DeleteAccountWarningDialogWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

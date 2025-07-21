@@ -17,7 +17,7 @@ class ProductReviewItemWidget extends StatelessWidget {
   final ReviewModel reviewModel;
   final int index;
   final int productId;
-  const ProductReviewItemWidget({Key? key, required this.reviewModel, required this.index, required this.productId}) : super(key: key);
+  const ProductReviewItemWidget({super.key, required this.reviewModel, required this.index, required this.productId});
 
   @override
   Widget build(BuildContext context) {

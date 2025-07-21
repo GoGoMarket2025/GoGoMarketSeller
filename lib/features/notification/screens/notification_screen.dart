@@ -19,7 +19,7 @@ import 'package:sixvalley_vendor_app/features/notification/domain/models/notific
 import 'package:url_launcher/url_launcher.dart';
 
 class NotificationScreen extends StatefulWidget {
-  const NotificationScreen({Key? key}) : super(key: key);
+  const NotificationScreen({super.key});
 
   @override
   State<NotificationScreen> createState() => _NotificationScreenState();
@@ -63,7 +63,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
 class NotificationCard extends StatelessWidget {
   final NotificationItem notificationItem;
-  const NotificationCard({Key? key, required this.notificationItem}) : super(key: key);
+  const NotificationCard({super.key, required this.notificationItem});
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ class NotificationCard extends StatelessWidget {
 class NotificationDialog extends StatelessWidget {
   final String title;
   final String subTitle;
-  const NotificationDialog({Key? key, required this.title, required this.subTitle}) : super(key: key);
+  const NotificationDialog({super.key, required this.title, required this.subTitle});
 
   @override
   Widget build(BuildContext context) {

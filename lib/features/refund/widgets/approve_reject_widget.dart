@@ -15,7 +15,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_snackbar_widget.d
 class ApprovedAndRejectWidget extends StatefulWidget {
   final RefundModel? refundModel;
   final int? orderDetailsId;
-  const ApprovedAndRejectWidget({Key? key, this.refundModel, this.orderDetailsId}) : super(key: key);
+  const ApprovedAndRejectWidget({super.key, this.refundModel, this.orderDetailsId});
 
   @override
   State<ApprovedAndRejectWidget> createState() => _ApprovedAndRejectWidgetState();

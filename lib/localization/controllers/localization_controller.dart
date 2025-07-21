@@ -36,7 +36,7 @@ class LocalizationController extends ChangeNotifier {
     notifyListeners();
   }
 
-  _loadCurrentLanguage() async {
+  Future<void> _loadCurrentLanguage() async {
     _locale = Locale(sharedPreferences!.getString(AppConstants.languageCode) ?? AppConstants.languages[0].languageCode!,
         sharedPreferences!.getString(AppConstants.countryCode) ?? AppConstants.languages[0].countryCode);
     for(int index=0; index<AppConstants.languages.length; index++) {
@@ -51,7 +51,7 @@ class LocalizationController extends ChangeNotifier {
     notifyListeners();
   }
 
-  _saveLanguage(Locale locale) async {
+  Future<void> _saveLanguage(Locale locale) async {
     sharedPreferences!.setString(AppConstants.languageCode, locale.languageCode);
     sharedPreferences!.setString(AppConstants.countryCode, locale.countryCode!);
   }

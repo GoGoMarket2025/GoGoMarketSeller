@@ -8,7 +8,7 @@ import 'package:sixvalley_vendor_app/features/settings/screens/order_wise_shippi
 import 'package:sixvalley_vendor_app/features/shipping/screens/category_wise_shipping_screen.dart';
 
 class ShippingMainScreen extends StatelessWidget {
-  const ShippingMainScreen({Key? key}) : super(key: key);
+  const ShippingMainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class ThirdPartyDeliveryInfoWidget extends StatelessWidget {
   final Order? orderModel;
-  const ThirdPartyDeliveryInfoWidget({Key? key, this.orderModel}) : super(key: key);
+  const ThirdPartyDeliveryInfoWidget({super.key, this.orderModel});
 
   @override
   Widget build(BuildContext context) {

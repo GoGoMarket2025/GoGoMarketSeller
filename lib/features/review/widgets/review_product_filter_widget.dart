@@ -8,7 +8,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/paginated_list_view_widg
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class ReviewProductFilterWidget extends StatefulWidget {
-  const ReviewProductFilterWidget({Key? key}) : super(key: key);
+  const ReviewProductFilterWidget({super.key});
 
   @override
   State<ReviewProductFilterWidget> createState() => _ReviewProductFilterWidgetState();

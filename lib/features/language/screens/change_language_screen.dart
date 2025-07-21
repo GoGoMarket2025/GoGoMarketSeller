@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_app_bar_widget.da
 
 
 class ChooseLanguageScreen extends StatelessWidget {
-  const ChooseLanguageScreen({Key? key}) : super(key: key);
+  const ChooseLanguageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

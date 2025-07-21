@@ -9,7 +9,7 @@ class ProductCalculationItemWidget extends StatelessWidget {
   final String? title;
   final double? price;
   final bool isQ;
-  const ProductCalculationItemWidget({Key? key, this.title, this.price, this.isQ = false}) : super(key: key);
+  const ProductCalculationItemWidget({super.key, this.title, this.price, this.isQ = false});
 
   @override
   Widget build(BuildContext context) {

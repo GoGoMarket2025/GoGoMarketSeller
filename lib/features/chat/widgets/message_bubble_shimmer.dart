@@ -6,7 +6,7 @@ import 'package:sixvalley_vendor_app/features/chat/controllers/chat_controller.d
 
 class MessageBubbleShimmerWidget extends StatelessWidget {
   final bool isMe;
-  const MessageBubbleShimmerWidget({Key? key, required this.isMe}) : super(key: key);
+  const MessageBubbleShimmerWidget({super.key, required this.isMe});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RatingBarIndicatorWidget extends StatefulWidget {
-  const RatingBarIndicatorWidget({Key? key,
+  const RatingBarIndicatorWidget({super.key,
     required this.itemBuilder,
     this.textDirection,
     this.unratedColor,
@@ -11,7 +11,7 @@ class RatingBarIndicatorWidget extends StatefulWidget {
     this.itemSize = 40.0,
     this.physics = const NeverScrollableScrollPhysics(),
     this.rating = 0.0,
-  }) : super(key: key);
+  });
 
 
   final IndexedWidgetBuilder itemBuilder;
@@ -171,7 +171,7 @@ class RatingBar extends StatelessWidget {
   final double size;
   final Color? color;
 
-  const RatingBar({Key? key, required this.rating, this.size = 18, this.color}) : super(key: key);
+  const RatingBar({super.key, required this.rating, this.size = 18, this.color});
 
   @override
   Widget build(BuildContext context) {

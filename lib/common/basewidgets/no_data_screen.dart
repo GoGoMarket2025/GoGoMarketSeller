@@ -10,7 +10,7 @@ class NoDataScreen extends StatelessWidget {
   final Color? color;
   final String? image;
   final EdgeInsets? padding;
-  const NoDataScreen({Key? key, this.title, this.color, this.image, this.padding}) : super(key: key);
+  const NoDataScreen({super.key, this.title, this.color, this.image, this.padding});
 
   @override
   Widget build(BuildContext context) {

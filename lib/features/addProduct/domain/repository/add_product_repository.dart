@@ -327,12 +327,12 @@ class AddProductRepository implements AddProductRepositoryInterface{
       }
     } else {
       try {
-        print("==RequestData==>>${requestData}");
+        print("==RequestData==>>$requestData");
         Response response = await dioClient!.post('${AppConstants.baseUrl}${isAdd ? AppConstants.addProductUri : '${AppConstants.updateProductUri}/${product.id}'}',
           data: requestData,
         );
 
-        print("==RequestData==>>${requestData}");
+        print("==RequestData==>>$requestData");
 
         return ApiResponse.withSuccess(response);
 

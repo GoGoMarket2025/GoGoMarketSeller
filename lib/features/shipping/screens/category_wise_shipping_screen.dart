@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/features/shipping/widgets/drop_down_for_shi
 
 
 class CategoryWiseShippingScreen extends StatefulWidget {
-  const CategoryWiseShippingScreen({Key? key}) : super(key: key);
+  const CategoryWiseShippingScreen({super.key});
 
   @override
   State<CategoryWiseShippingScreen> createState() => _CategoryWiseShippingScreenState();

@@ -24,7 +24,7 @@ import 'package:sixvalley_vendor_app/features/splash/widgets/splash_painter_widg
 
 class SplashScreen extends StatefulWidget {
   final NotificationBody? body;
-  const SplashScreen({Key? key, this.body}) : super(key: key);
+  const SplashScreen({super.key, this.body});
   @override
   SplashScreenState createState() => SplashScreenState();
 }

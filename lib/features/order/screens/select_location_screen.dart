@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/features/order/widgets/location_search_dial
 
 class SelectLocationScreen extends StatefulWidget {
   final GoogleMapController? googleMapController;
-  const SelectLocationScreen({Key? key, required this.googleMapController}) : super(key: key);
+  const SelectLocationScreen({super.key, required this.googleMapController});
 
   @override
   SelectLocationScreenState createState() => SelectLocationScreenState();

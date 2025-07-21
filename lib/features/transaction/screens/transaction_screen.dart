@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/no_data_screen.dart';
 import 'package:sixvalley_vendor_app/features/transaction/widgets/transaction_widget.dart';
 
 class TransactionScreen extends StatefulWidget {
-  const TransactionScreen({Key? key}) : super(key: key);
+  const TransactionScreen({super.key});
 
   @override
   State<TransactionScreen> createState() => _TransactionScreenState();
@@ -82,7 +82,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
 class TransactionTypeButton extends StatelessWidget {
   final String text;
   final int index;
-  const TransactionTypeButton({Key? key, required this.text, required this.index,}) : super(key: key);
+  const TransactionTypeButton({super.key, required this.text, required this.index,});
 
   @override
   Widget build(BuildContext context) {

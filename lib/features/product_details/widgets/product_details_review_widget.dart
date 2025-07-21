@@ -13,7 +13,7 @@ import 'package:sixvalley_vendor_app/features/product/widgets/product_review_ite
 
 class ProductReviewWidget extends StatefulWidget {
   final Product? productModel;
-  const ProductReviewWidget({Key? key, this.productModel}) : super(key: key);
+  const ProductReviewWidget({super.key, this.productModel});
   @override
   State<ProductReviewWidget> createState() => _ProductReviewWidgetState();
 }
@@ -25,25 +25,25 @@ class _ProductReviewWidgetState extends State<ProductReviewWidget> {
   String message = "";
   bool activated = false;
   bool endScroll = false;
-  _onStartScroll(ScrollMetrics metrics) {
+  void _onStartScroll(ScrollMetrics metrics) {
     setState(() {
       message = "start";
     });
   }
 
-  _onUpdateScroll(ScrollMetrics metrics) {
+  void _onUpdateScroll(ScrollMetrics metrics) {
     setState(() {
       message = "scrolling";
     });
   }
 
-  _onEndScroll(ScrollMetrics metrics) {
+  void _onEndScroll(ScrollMetrics metrics) {
     setState(() {
       message = "end";
     });
   }
 
-  _scrollListener() {
+  void _scrollListener() {
     if (_controller.offset >= _controller.position.maxScrollExtent && !_controller.position.outOfRange) {
       setState(() {
         endScroll = true;

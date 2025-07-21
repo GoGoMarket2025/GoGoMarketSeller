@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/earning_card_
 class DeliverymanEarningListViewWidget extends StatefulWidget {
   final DeliveryMan? deliveryMan;
   final ScrollController? scrollController;
-  const DeliverymanEarningListViewWidget({Key? key, this.deliveryMan, this.scrollController}) : super(key: key);
+  const DeliverymanEarningListViewWidget({super.key, this.deliveryMan, this.scrollController});
 
   @override
   State<DeliverymanEarningListViewWidget> createState() => _DeliverymanEarningListViewWidgetState();

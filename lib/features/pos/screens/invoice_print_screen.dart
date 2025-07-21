@@ -29,7 +29,7 @@ class InVoicePrintScreen extends StatefulWidget {
   final double? extraDiscountAmount;
   final double? tax;
   final double? total;
-  const InVoicePrintScreen({Key? key, this.invoice, this.shopModel, this.orderId, this.discountProduct, this.total, this.couponDiscountProduct, this.tax, this.extraDiscountAmount}) : super(key: key);
+  const InVoicePrintScreen({super.key, this.invoice, this.shopModel, this.orderId, this.discountProduct, this.total, this.couponDiscountProduct, this.tax, this.extraDiscountAmount});
 
   @override
   State<InVoicePrintScreen> createState() => _InVoicePrintScreenState();

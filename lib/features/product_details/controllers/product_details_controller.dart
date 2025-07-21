@@ -132,7 +132,7 @@ class ProductDetailsController extends ChangeNotifier{
                 folderType: selectedFolderType,
               ),
               iosConfig: IosConfig(
-                subFolderPath: subFolderPathCtrl.text.trim(),
+                folderPath: subFolderPathCtrl.text.trim(),
               ),
             );
           }else {
@@ -152,4 +152,8 @@ class ProductDetailsController extends ChangeNotifier{
 
 
 
+}
+
+class FolderType {
+  static var download;
 }

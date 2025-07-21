@@ -21,7 +21,7 @@ class ProductViewWidget extends StatefulWidget {
   final int? sellerId;
   final bool fromNotification;
   final double keyboardHeight;
-  const ProductViewWidget({Key? key, required this.sellerId, this.fromNotification = false, required this.keyboardHeight}) : super(key: key);
+  const ProductViewWidget({super.key, required this.sellerId, this.fromNotification = false, required this.keyboardHeight});
 
   @override
   State<ProductViewWidget> createState() => _ProductViewWidgetState();
@@ -33,7 +33,7 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
   String message = "";
   bool activated = false;
   bool endScroll = false;
-  _scrollListener() {
+  void _scrollListener() {
     if (scrollController.offset >= scrollController.position.maxScrollExtent && !scrollController.position.outOfRange) {
       setState(() {
         endScroll = true;

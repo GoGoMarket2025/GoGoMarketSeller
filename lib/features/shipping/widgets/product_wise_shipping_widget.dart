@@ -9,7 +9,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_app_bar_widget.da
 import 'package:sixvalley_vendor_app/features/shipping/widgets/drop_down_for_shipping_type_widget.dart';
 
 class ProductWiseShippingWidget extends StatefulWidget {
-  const ProductWiseShippingWidget({Key? key}) : super(key: key);
+  const ProductWiseShippingWidget({super.key});
 
   @override
   State<ProductWiseShippingWidget> createState() => _ProductWiseShippingWidgetState();

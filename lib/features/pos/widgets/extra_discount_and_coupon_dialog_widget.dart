@@ -13,7 +13,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/textfeild/custom_text_fe
 
 class ExtraDiscountAndCouponDialogWidget extends StatelessWidget {
   final double payable;
-  const ExtraDiscountAndCouponDialogWidget({Key? key, required this.payable}) : super(key: key);
+  const ExtraDiscountAndCouponDialogWidget({super.key, required this.payable});
 
   @override
   Widget build(BuildContext context) {

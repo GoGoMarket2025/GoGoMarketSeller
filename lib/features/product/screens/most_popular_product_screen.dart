@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/features/product/widgets/top_most_product_c
 
 class MostPopularProductScreen extends StatelessWidget {
   final bool isMain;
-  const MostPopularProductScreen({Key? key, this.isMain = false}) : super(key: key);
+  const MostPopularProductScreen({super.key, this.isMain = false});
 
   @override
   Widget build(BuildContext context) {

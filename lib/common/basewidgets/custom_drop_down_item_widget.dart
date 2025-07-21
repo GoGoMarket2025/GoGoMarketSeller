@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 class CustomDropDownItemWidget extends StatelessWidget {
   final String? title;
   final Widget? widget;
-  const CustomDropDownItemWidget({Key? key, this.title, this.widget}) : super(key: key);
+  const CustomDropDownItemWidget({super.key, this.title, this.widget});
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ class WalletCardWidget extends StatelessWidget {
   final String? amount;
   final String? title;
   final Color? color;
-  const WalletCardWidget({Key? key, this.amount, this.title, this.color}) : super(key: key);
+  const WalletCardWidget({super.key, this.amount, this.title, this.color});
 
   @override
   Widget build(BuildContext context) {

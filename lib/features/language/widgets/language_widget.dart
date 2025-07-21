@@ -11,7 +11,7 @@ class LanguageWidget extends StatelessWidget {
   final LanguageModel languageModel;
   final LocalizationController localizationController;
   final int index;
-  const LanguageWidget({Key? key, required this.languageModel, required this.localizationController, required this.index}) : super(key: key);
+  const LanguageWidget({super.key, required this.languageModel, required this.localizationController, required this.index});
 
   @override
   Widget build(BuildContext context) {

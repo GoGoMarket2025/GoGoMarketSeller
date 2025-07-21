@@ -19,7 +19,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/delivery_man_
 
 class AddNewDeliveryManScreen extends StatefulWidget {
   final DeliveryMan? deliveryMan;
-  const AddNewDeliveryManScreen({Key? key, this.deliveryMan}) : super(key: key);
+  const AddNewDeliveryManScreen({super.key, this.deliveryMan});
 
   @override
   State<AddNewDeliveryManScreen> createState() => _AddNewDeliveryManScreenState();

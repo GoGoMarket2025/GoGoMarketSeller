@@ -22,7 +22,7 @@ class ReviewReplyScreen extends StatefulWidget {
   final int? index;
   final int? productId;
   final bool? formProduct;
-  const ReviewReplyScreen({Key? key, this.reviewModel, this.index, this.productId, this.formProduct = true}) : super(key: key);
+  const ReviewReplyScreen({super.key, this.reviewModel, this.index, this.productId, this.formProduct = true});
 
   @override
   State<ReviewReplyScreen> createState() => _ReviewReplyScreenState();

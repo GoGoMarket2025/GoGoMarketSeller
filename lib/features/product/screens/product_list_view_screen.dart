@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/features/product/screens/top_selling_produc
 class ProductListScreen extends StatelessWidget {
   final String title;
   final bool isPopular;
-  const ProductListScreen({Key? key, required this.title, this.isPopular = false}) : super(key: key);
+  const ProductListScreen({super.key, required this.title, this.isPopular = false});
 
   @override
   Widget build(BuildContext context) {

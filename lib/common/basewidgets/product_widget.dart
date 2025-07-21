@@ -20,7 +20,7 @@ import 'package:sixvalley_vendor_app/features/product_details/screens/product_de
 
 class ProductWidget extends StatefulWidget {
   final Product productModel;
-  const ProductWidget({Key? key, required this.productModel}) : super(key: key);
+  const ProductWidget({super.key, required this.productModel});
 
   @override
   State<ProductWidget> createState() => _ProductWidgetState();

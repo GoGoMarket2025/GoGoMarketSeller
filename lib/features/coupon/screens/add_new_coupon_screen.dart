@@ -21,7 +21,7 @@ import 'package:sixvalley_vendor_app/features/pos/screens/customer_search_screen
 
 class AddNewCouponScreen extends StatefulWidget {
   final Coupons? coupons;
-  const AddNewCouponScreen({Key? key, this.coupons}) : super(key: key);
+  const AddNewCouponScreen({super.key, this.coupons});
 
   @override
   State<AddNewCouponScreen> createState() => _AddNewCouponScreenState();

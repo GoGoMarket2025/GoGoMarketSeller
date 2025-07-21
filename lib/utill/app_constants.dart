@@ -2,7 +2,7 @@ import 'package:sixvalley_vendor_app/localization/models/language_model.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 
 class AppConstants {
-  static const String appName = 'Vendor App';
+  static const String appName = 'GoGoSeller';
   static const String appVersion = '15.2'; // Flutter SDK version - 3.29.3
   static const String companyName = 'GoGoSeller';
 
@@ -209,11 +209,9 @@ class AppConstants {
   static const String bluetoothMacAddress = 'bluetooth_mac_address';
 
   static List<LanguageModel> languages = [
+    LanguageModel(imageUrl: Images.ru, languageName: 'Русский', countryCode: 'RU', languageCode: 'ru'),
+    LanguageModel(imageUrl: Images.uzbek, languageName: 'Ozbek', countryCode: 'UZ', languageCode: 'uz'),
     LanguageModel(imageUrl: Images.unitedKingdom, languageName: 'English', countryCode: 'US', languageCode: 'en'),
-    LanguageModel(imageUrl: Images.arabic, languageName: 'Arabic', countryCode: 'SA', languageCode: 'ar'),
-    LanguageModel(imageUrl: Images.hindi, languageName: 'Hindi', countryCode: 'IN', languageCode: 'hi'),
-    LanguageModel(imageUrl: Images.bd, languageName: 'Bangla', countryCode: 'BD', languageCode: 'bn'),
-    LanguageModel(imageUrl: Images.spanish, languageName: 'Spanish', countryCode: 'ES', languageCode: 'es'),
   ];
 
   static const double maxSizeOfASingleFile = 10;

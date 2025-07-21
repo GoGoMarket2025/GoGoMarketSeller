@@ -58,7 +58,7 @@ class ProfileController with ChangeNotifier {
     return responseModel;
   }
 
-  setFreeDeliveryStatus(String val){
+  void setFreeDeliveryStatus(String val){
     _userInfoModel?.freeOverDeliveryAmountStatus = int.parse(val);
     notifyListeners();
   }

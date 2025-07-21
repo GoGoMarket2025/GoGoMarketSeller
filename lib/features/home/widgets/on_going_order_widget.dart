@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/features/home/widgets/order_type_button_hea
 
 class OngoingOrderWidget extends StatelessWidget {
   final Function? callback;
-  const OngoingOrderWidget({Key? key, this.callback}) : super(key: key);
+  const OngoingOrderWidget({super.key, this.callback});
 
   @override
   Widget build(BuildContext context) {

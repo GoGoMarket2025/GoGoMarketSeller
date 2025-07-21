@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/features/emergency_contract/widgets/emergen
 
 
 class EmergencyContactListViewWidget extends StatelessWidget {
-  const EmergencyContactListViewWidget({Key? key}) : super(key: key);
+  const EmergencyContactListViewWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class OrderShimmerWidget extends StatelessWidget {
   final bool isEnabled;
-  const OrderShimmerWidget({Key? key, required this.isEnabled}) : super(key: key);
+  const OrderShimmerWidget({super.key, required this.isEnabled});
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-Color _primaryColor = const Color(0xFF1455AC);
-Color _secondaryColor = const Color(0xFFF58300);
+Color _primaryColor = const Color(0xFFFF690E);
+Color _secondaryColor = const Color(0xFFFFFFFF);
 
 ThemeData light = ThemeData(
   fontFamily: 'TitilliumWeb',

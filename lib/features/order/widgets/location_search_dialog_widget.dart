@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class LocationSearchDialogWidget extends StatelessWidget {
   final GoogleMapController? mapController;
-  const LocationSearchDialogWidget({Key? key, required this.mapController}) : super(key: key);
+  const LocationSearchDialogWidget({super.key, required this.mapController});
 
   @override
   Widget build(BuildContext context) {

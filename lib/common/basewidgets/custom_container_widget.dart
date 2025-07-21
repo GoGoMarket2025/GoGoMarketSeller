@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 class CustomContainerWidget extends StatelessWidget {
   final String title;
   final Function()? onTap;
-  const CustomContainerWidget({Key? key, required this.title, this.onTap}) : super(key: key);
+  const CustomContainerWidget({super.key, required this.title, this.onTap});
 
   @override
   Widget build(BuildContext context) {

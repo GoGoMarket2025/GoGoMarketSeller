@@ -12,7 +12,7 @@ class OrderTypeButtonWidget extends StatelessWidget {
   final Function? callback;
   final int? numberOfOrder;
   final bool showBorder;
-  const OrderTypeButtonWidget({Key? key, required this.text,this.icon ,required this.index, required this.callback, required this.numberOfOrder, this.color, this.showBorder = true}) : super(key: key);
+  const OrderTypeButtonWidget({super.key, required this.text,this.icon ,required this.index, required this.callback, required this.numberOfOrder, this.color, this.showBorder = true});
 
   @override
   Widget build(BuildContext context) {

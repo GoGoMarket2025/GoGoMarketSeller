@@ -9,7 +9,7 @@ class PricingWidget extends StatelessWidget {
   final bool isTotal;
   final bool isCoupon;
   final Function? onTap;
-  const PricingWidget({Key? key, this.title, this.amount, this.isTotal = false, this.isCoupon = false, this.onTap}) : super(key: key);
+  const PricingWidget({super.key, this.title, this.amount, this.isTotal = false, this.isCoupon = false, this.onTap});
 
   @override
   Widget build(BuildContext context) {

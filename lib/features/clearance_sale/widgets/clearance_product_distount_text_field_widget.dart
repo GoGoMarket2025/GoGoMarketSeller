@@ -50,7 +50,7 @@ class ClearanceProductDiscountTextFieldWidget extends StatefulWidget {
   final Function(String text)? onDiscountTypeChanged;
 
   const ClearanceProductDiscountTextFieldWidget(
-      {Key? key, this.controller,
+      {super.key, this.controller,
         this.hintText,
         this.textInputType,
         this.maxLine,
@@ -81,7 +81,7 @@ class ClearanceProductDiscountTextFieldWidget extends StatefulWidget {
         this.formProduct = false,
         this.isClearanceDiscountAmount = false,
         this.onDiscountTypeChanged
-      }) : super(key: key);
+      });
 
   @override
   State<ClearanceProductDiscountTextFieldWidget> createState() => _ClearanceProductDiscountTextFieldWidgetState();

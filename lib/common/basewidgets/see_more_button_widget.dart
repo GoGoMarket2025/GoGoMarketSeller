@@ -4,7 +4,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class SeeMoreButtonWidget extends StatelessWidget {
-  const SeeMoreButtonWidget({Key? key}) : super(key: key);
+  const SeeMoreButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

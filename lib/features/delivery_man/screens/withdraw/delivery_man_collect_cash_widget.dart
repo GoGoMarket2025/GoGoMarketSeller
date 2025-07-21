@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_snackbar_widget.d
 class CollectedCashFromDeliveryManDialog extends StatefulWidget {
   final double? totalCashInHand;
   final int? deliveryManId;
-  const CollectedCashFromDeliveryManDialog({Key? key, this.totalCashInHand, this.deliveryManId}) : super(key: key);
+  const CollectedCashFromDeliveryManDialog({super.key, this.totalCashInHand, this.deliveryManId});
   @override
   CollectedCashFromDeliveryManDialogState createState() => CollectedCashFromDeliveryManDialogState();
 }

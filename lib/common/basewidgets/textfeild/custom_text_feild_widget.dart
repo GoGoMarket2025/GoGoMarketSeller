@@ -50,7 +50,7 @@ class CustomTextFieldWidget extends StatefulWidget {
   final bool readOnly;
 
   const CustomTextFieldWidget(
-      {Key? key, this.controller,
+      {super.key, this.controller,
         this.hintText,
         this.textInputType,
         this.maxLine,
@@ -84,7 +84,7 @@ class CustomTextFieldWidget extends StatefulWidget {
         this.inputFormatters,
         this.focusedBorderRadius = 8,
         this.readOnly = false
-      }) : super(key: key);
+      });
 
   @override
   State<CustomTextFieldWidget> createState() => _CustomTextFieldWidgetState();

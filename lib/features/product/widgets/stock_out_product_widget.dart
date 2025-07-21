@@ -18,7 +18,7 @@ import 'package:sixvalley_vendor_app/features/product/widgets/stockout_product_c
 class StockOutProductView extends StatelessWidget {
   final bool isHome;
   final ScrollController? scrollController;
-  const StockOutProductView({Key? key,  required this.isHome, this.scrollController}) : super(key: key);
+  const StockOutProductView({super.key,  required this.isHome, this.scrollController});
 
   @override
   Widget build(BuildContext context) {

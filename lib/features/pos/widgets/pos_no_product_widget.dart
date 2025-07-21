@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class PosNoProductWidget extends StatelessWidget {
-  const PosNoProductWidget({Key? key}) : super(key: key);
+  const PosNoProductWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

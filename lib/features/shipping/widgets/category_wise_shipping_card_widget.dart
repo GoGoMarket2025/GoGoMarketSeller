@@ -15,7 +15,7 @@ class CategoryWiseShippingCardWidget extends StatelessWidget {
   final Category? category;
   final int? index;
 
-  const CategoryWiseShippingCardWidget({Key? key, this.shipProv, this.category, this.index}) : super(key: key);
+  const CategoryWiseShippingCardWidget({super.key, this.shipProv, this.category, this.index});
 
   @override
   Widget build(BuildContext context) {

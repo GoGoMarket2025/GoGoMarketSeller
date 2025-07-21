@@ -29,7 +29,7 @@ import 'package:sixvalley_vendor_app/features/wallet/screens/wallet_screen.dart'
 import 'package:sixvalley_vendor_app/features/bank_info/screens/bank_info_screen.dart';
 
 class MenuBottomSheetWidget extends StatelessWidget {
-  const MenuBottomSheetWidget({Key? key}) : super(key: key);
+  const MenuBottomSheetWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -86,7 +86,7 @@ class LocationController with ChangeNotifier {
 
   int get selectAddressIndex => _selectAddressIndex;
 
-  updateAddressIndex(int index, bool notify) {
+  void updateAddressIndex(int index, bool notify) {
     _selectAddressIndex = index;
     if(notify) {
       notifyListeners();

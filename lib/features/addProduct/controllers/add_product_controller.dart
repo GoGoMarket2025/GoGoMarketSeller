@@ -31,7 +31,7 @@ class AddProductController extends ChangeNotifier {
 
   AddProductController({required this.shopServiceInterface});
 
-  int _totalQuantity = 0;
+  final int _totalQuantity = 0;
   int get totalQuantity => _totalQuantity;
   String? _unitValue;
   String? get unitValue => _unitValue;
@@ -79,7 +79,7 @@ class AddProductController extends ChangeNotifier {
   int get totalVariantQuantity => _totalVariantQuantity;
 
   List<Map<String, dynamic>>? productReturnImage  = [];
-  int _variationTotalQuantity = 0;
+  final int _variationTotalQuantity = 0;
   int get variationTotalQuantity  => _variationTotalQuantity;
   final bool _isCategoryLoading = false;
   bool get isCategoryLoading => _isCategoryLoading;
@@ -100,7 +100,7 @@ class AddProductController extends ChangeNotifier {
     _descriptionControllerList[index].text = description;
   }
   
-  getTitleAndDescriptionList(List<Language> languageList, EditProductModel? edtProduct){
+  void getTitleAndDescriptionList(List<Language> languageList, EditProductModel? edtProduct){
     _titleControllerList = [];
     _descriptionControllerList = [];
     for(int i= 0; i<languageList.length; i++){
@@ -263,15 +263,15 @@ class AddProductController extends ChangeNotifier {
     DigitalVariationModel? digitalVariationModel;
     String? token;
 
-    List<AttributeModel>? _attributeList = Provider.of<VariationController>(context, listen: false).attributeList;
+    List<AttributeModel>? attributeList = Provider.of<VariationController>(context, listen: false).attributeList;
 
     Map<String, dynamic> variationFields = Provider.of<VariationController>(context, listen: false).processVariantData(context);
 
-    print('------>>VariationFileds------>>${variationFields}');
+    print('------>>VariationFileds------>>$variationFields');
 
     Provider.of<VariationController>(context, listen: false).onClearColorVariations(addProduct);
 
-    List<Map<String, dynamic>>? _productReturnImages = addProductImageController.productReturnImageList;
+    List<Map<String, dynamic>>? productReturnImages = addProductImageController.productReturnImageList;
 
     List<ColorImage> colorImageObjects = addProductImageController.colorImageObject;
 
@@ -289,7 +289,7 @@ class AddProductController extends ChangeNotifier {
 
 
 
-    ApiResponse response = await shopServiceInterface.addProduct(product, addProduct ,variationFields, _productReturnImages, thumbnail, metaImage, isAdd, _attributeList![0].active, colorImageObjects, tags, digitalProductFileName, digitalVariationModel, isDigitalVariationEmpty, token);
+    ApiResponse response = await shopServiceInterface.addProduct(product, addProduct ,variationFields, productReturnImages, thumbnail, metaImage, isAdd, attributeList![0].active, colorImageObjects, tags, digitalProductFileName, digitalVariationModel, isDigitalVariationEmpty, token);
     if(response.response != null && response.response?.statusCode == 200) {
 
     await addProductImageController.onDeleteColorImages(product);

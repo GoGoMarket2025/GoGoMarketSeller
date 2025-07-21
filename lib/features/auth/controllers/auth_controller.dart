@@ -121,7 +121,7 @@ class AuthController with ChangeNotifier {
     notifyListeners();
   }
 
-  toggleRememberMe() {
+  void toggleRememberMe() {
     _isActiveRememberMe = !_isActiveRememberMe;
     notifyListeners();
   }
@@ -167,7 +167,7 @@ class AuthController with ChangeNotifier {
   }
 
 
-  updateVerificationCode(String query) {
+  void updateVerificationCode(String query) {
     if (query.length == 4) {
       _isEnableVerificationCode = true;
     } else {

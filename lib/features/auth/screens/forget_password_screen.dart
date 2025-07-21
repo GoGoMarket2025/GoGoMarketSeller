@@ -16,7 +16,7 @@ import 'package:sixvalley_vendor_app/features/auth/widgets/my_dialog_widget.dart
 import 'package:sixvalley_vendor_app/features/auth/screens/otp_verification_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+  const ForgotPasswordScreen({super.key});
 
   @override
   State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();

@@ -15,7 +15,7 @@ class CustomPasswordTextFieldWidget extends StatefulWidget {
   final Function? onChanged;
 
 
-  const CustomPasswordTextFieldWidget({Key? key, this.controller, this.hintTxt, this.focusNode, this.nextNode, this.textInputAction, this.border = false, this.prefixIconImage, this.onChanged}) : super(key: key);
+  const CustomPasswordTextFieldWidget({super.key, this.controller, this.hintTxt, this.focusNode, this.nextNode, this.textInputAction, this.border = false, this.prefixIconImage, this.onChanged});
 
   @override
   CustomPasswordTextFieldWidgetState createState() => CustomPasswordTextFieldWidgetState();

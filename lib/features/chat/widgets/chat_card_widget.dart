@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/features/chat/screens/chat_screen.dart';
 class ChatCardWidget extends StatelessWidget {
   final Chat? chat;
   final Function callBack;
-  const ChatCardWidget({Key? key, this.chat, required this.callBack}) : super(key: key);
+  const ChatCardWidget({super.key, this.chat, required this.callBack});
 
   @override
   Widget build(BuildContext context) {

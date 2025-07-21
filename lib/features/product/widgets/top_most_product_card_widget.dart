@@ -15,7 +15,7 @@ class TopMostProductWidget extends StatelessWidget {
   final Product? productModel;
   final bool isPopular;
   final String? totalSold;
-  const TopMostProductWidget({Key? key, this.productModel, this.isPopular = false, this.totalSold}) : super(key: key);
+  const TopMostProductWidget({super.key, this.productModel, this.isPopular = false, this.totalSold});
 
   @override
   Widget build(BuildContext context) {

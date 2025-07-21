@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_button_widget.dar
 
 class ChooseShippingDialogWidget extends StatefulWidget {
 
-  const ChooseShippingDialogWidget({Key? key}) : super(key: key);
+  const ChooseShippingDialogWidget({super.key});
 
   @override
   State<ChooseShippingDialogWidget> createState() => _ChooseShippingDialogWidgetState();

@@ -15,7 +15,7 @@ import 'package:sixvalley_vendor_app/features/auth/screens/auth_screen.dart';
 class ResetPasswordWidget extends StatefulWidget {
   final String mobileNumber;
   final String otp;
-  const ResetPasswordWidget({Key? key,required this.mobileNumber,required this.otp}) : super(key: key);
+  const ResetPasswordWidget({super.key,required this.mobileNumber,required this.otp});
 
   @override
   ResetPasswordWidgetState createState() => ResetPasswordWidgetState();

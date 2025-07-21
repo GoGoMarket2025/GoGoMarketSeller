@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 
 class WalletTransactionListViewWidget extends StatelessWidget {
   final TransactionController? transactionProvider;
-  const WalletTransactionListViewWidget({Key? key, this.transactionProvider}) : super(key: key);
+  const WalletTransactionListViewWidget({super.key, this.transactionProvider});
 
   @override
   Widget build(BuildContext context) {

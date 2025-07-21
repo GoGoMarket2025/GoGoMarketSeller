@@ -16,7 +16,7 @@ import 'package:sixvalley_vendor_app/features/settings/screens/order_wise_shippi
 
 class OrderWiseShippingAddScreen extends StatefulWidget {
   final ShippingModel? shipping;
-  const OrderWiseShippingAddScreen({Key? key, this.shipping}) : super(key: key);
+  const OrderWiseShippingAddScreen({super.key, this.shipping});
   @override
   OrderWiseShippingAddScreenState createState() => OrderWiseShippingAddScreenState();
 }

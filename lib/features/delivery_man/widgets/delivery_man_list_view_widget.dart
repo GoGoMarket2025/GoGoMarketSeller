@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/delivery_man_
 import 'package:sixvalley_vendor_app/features/pos/widgets/pos_product_shimmer_widget.dart';
 
 class DeliveryManListViewWidget extends StatelessWidget {
-  const DeliveryManListViewWidget({Key? key}) : super(key: key);
+  const DeliveryManListViewWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

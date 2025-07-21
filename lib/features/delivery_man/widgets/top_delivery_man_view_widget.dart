@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/top_delivery_
 
 class TopDeliveryManViewWidget extends StatelessWidget {
   final bool isMain;
-  const TopDeliveryManViewWidget({Key? key, this.isMain = false}) : super(key: key);
+  const TopDeliveryManViewWidget({super.key, this.isMain = false});
 
   @override
   Widget build(BuildContext context) {

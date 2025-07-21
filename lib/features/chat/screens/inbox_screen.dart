@@ -16,7 +16,7 @@ class InboxScreen extends StatefulWidget {
   final bool isBackButtonExist;
   final bool fromNotification;
   final int initIndex;
-  const InboxScreen({Key? key, this.isBackButtonExist = true, this.fromNotification = false, this.initIndex = 0}) : super(key: key);
+  const InboxScreen({super.key, this.isBackButtonExist = true, this.fromNotification = false, this.initIndex = 0});
 
   @override
   State<InboxScreen> createState() => _InboxScreenState();

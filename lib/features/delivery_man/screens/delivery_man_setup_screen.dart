@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/screens/withdraw/with
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class DeliveryManSetupScreen extends StatelessWidget {
-  const DeliveryManSetupScreen({Key? key}) : super(key: key);
+  const DeliveryManSetupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class DeliveryManSetupCard extends StatelessWidget {
   final String? icon;
   final String? title;
   final Widget? widget;
-  const DeliveryManSetupCard({Key? key, this.icon, this.title, this.widget}) : super(key: key);
+  const DeliveryManSetupCard({super.key, this.icon, this.title, this.widget});
 
   @override
   Widget build(BuildContext context) {

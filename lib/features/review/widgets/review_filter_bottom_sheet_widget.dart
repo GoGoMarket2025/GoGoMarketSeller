@@ -18,7 +18,7 @@ import 'package:sixvalley_vendor_app/features/review/widgets/review_product_filt
 
 
 class ReviewFilterBottomSheetWidget extends StatefulWidget {
-  const ReviewFilterBottomSheetWidget({Key? key}) : super(key: key);
+  const ReviewFilterBottomSheetWidget({super.key});
 
   @override
   State<ReviewFilterBottomSheetWidget> createState() => _ReviewFilterBottomSheetWidgetState();

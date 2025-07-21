@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/screens/delivery_man_
 
 class TopDeliveryManWidget extends StatelessWidget {
   final DeliveryMan? deliveryMan;
-  const TopDeliveryManWidget({Key? key, this.deliveryMan}) : super(key: key);
+  const TopDeliveryManWidget({super.key, this.deliveryMan});
 
   @override
   Widget build(BuildContext context) {

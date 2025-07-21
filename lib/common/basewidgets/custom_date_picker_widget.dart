@@ -10,7 +10,7 @@ class CustomDatePickerWidget extends StatefulWidget {
   final bool requiredField;
   final bool fromClearance;
   final Function? selectDate;
-  const CustomDatePickerWidget({Key? key, this.title,this.text,this.image, this.fromClearance = false,  this.requiredField = false,this.selectDate}) : super(key: key);
+  const CustomDatePickerWidget({super.key, this.title,this.text,this.image, this.fromClearance = false,  this.requiredField = false,this.selectDate});
 
   @override
   State<CustomDatePickerWidget> createState() => _CustomDatePickerWidgetState();

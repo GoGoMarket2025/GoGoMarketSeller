@@ -6,7 +6,7 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 
 class ImageDialogWidget extends StatelessWidget {
   final String imageUrl;
-  const ImageDialogWidget({Key? key, required this.imageUrl}) : super(key: key);
+  const ImageDialogWidget({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {

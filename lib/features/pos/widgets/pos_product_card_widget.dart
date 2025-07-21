@@ -18,7 +18,7 @@ import 'package:sixvalley_vendor_app/features/pos/widgets/product_variation_sele
 class POSProductWidget extends StatefulWidget {
   final int? index;
   final Product productModel;
-  const POSProductWidget({Key? key, required this.productModel, this.index}) : super(key: key);
+  const POSProductWidget({super.key, required this.productModel, this.index});
 
   @override
   State<POSProductWidget> createState() => _ProductWidgetState();

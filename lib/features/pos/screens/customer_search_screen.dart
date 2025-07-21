@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/no_data_screen.dart';
 
 class CustomerSearchScreen extends StatefulWidget {
   final bool isCoupon;
-  const CustomerSearchScreen({Key? key, this.isCoupon = false}) : super(key: key);
+  const CustomerSearchScreen({super.key, this.isCoupon = false});
 
   @override
   State<CustomerSearchScreen> createState() => _CustomerSearchScreenState();

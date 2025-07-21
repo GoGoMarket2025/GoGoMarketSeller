@@ -20,7 +20,7 @@ class CustomSerachWidget extends StatefulWidget {
   final List<TextInputFormatter>? inputFormatters;
 
   const CustomSerachWidget({
-    Key? key,
+    super.key,
 
     required this.width,
 
@@ -38,7 +38,7 @@ class CustomSerachWidget extends StatefulWidget {
     this.closeSearchOnSuffixTap = false,
     this.inputFormatters,
     this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   CustomSerachWidgetState createState() => CustomSerachWidgetState();
@@ -60,7 +60,7 @@ class CustomSerachWidgetState extends State<CustomSerachWidget>
     );
   }
 
-  unfocusKeyboard() {
+  void unfocusKeyboard() {
     final FocusScopeNode currentScope = FocusScope.of(context);
     if (!currentScope.hasPrimaryFocus && currentScope.hasFocus) {
       FocusManager.instance.primaryFocus?.unfocus();

@@ -18,7 +18,7 @@ import 'package:sixvalley_vendor_app/features/dashboard/screens/dashboard_screen
 import 'package:sixvalley_vendor_app/features/auth/screens/forget_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   LoginScreenState createState() => LoginScreenState();

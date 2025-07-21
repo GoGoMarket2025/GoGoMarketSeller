@@ -11,7 +11,7 @@ class CustomBottomSheetWidget extends StatelessWidget {
   final String? title;
   final bool isProfile;
   final Function? onTap;
-  const CustomBottomSheetWidget({Key? key,  required this.image, required this.title, this.isProfile = false, this.onTap,}) : super(key: key);
+  const CustomBottomSheetWidget({super.key,  required this.image, required this.title, this.isProfile = false, this.onTap,});
 
   @override
   Widget build(BuildContext context) {

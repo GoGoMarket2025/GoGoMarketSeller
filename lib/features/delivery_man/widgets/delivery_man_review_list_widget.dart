@@ -8,7 +8,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/delivery_man_
 
 class DeliveryManReviewListWidget extends StatelessWidget {
   final DeliveryMan? deliveryMan;
-  const DeliveryManReviewListWidget({Key? key, this.deliveryMan}) : super(key: key);
+  const DeliveryManReviewListWidget({super.key, this.deliveryMan});
 
   @override
   Widget build(BuildContext context) {

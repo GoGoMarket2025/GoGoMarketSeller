@@ -12,7 +12,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class DeliveryManInfoWidget extends StatelessWidget {
   final RefundController? refundReq;
-  const DeliveryManInfoWidget({Key? key, this.refundReq}) : super(key: key);
+  const DeliveryManInfoWidget({super.key, this.refundReq});
 
   @override
   Widget build(BuildContext context) {

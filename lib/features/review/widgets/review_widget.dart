@@ -18,7 +18,7 @@ class ReviewWidget extends StatelessWidget {
   final int? index;
   final ReviewModel? reviewModel;
   final bool? isDetails;
-  const ReviewWidget({Key? key, required this.reviewModel, this.isDetails = false, this.index}) : super(key: key);
+  const ReviewWidget({super.key, required this.reviewModel, this.isDetails = false, this.index});
 
   @override
   Widget build(BuildContext context) {

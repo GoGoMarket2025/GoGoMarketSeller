@@ -20,7 +20,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class BarCodeGenerateScreen extends StatefulWidget {
   final Product? product;
-  const BarCodeGenerateScreen({Key? key, this.product}) : super(key: key);
+  const BarCodeGenerateScreen({super.key, this.product});
 
   @override
   State<BarCodeGenerateScreen> createState() => _BarCodeGenerateScreenState();

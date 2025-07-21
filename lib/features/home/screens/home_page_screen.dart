@@ -26,7 +26,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/top_delivery_
 
 class HomePageScreen extends StatefulWidget {
   final Function? callback;
-  const HomePageScreen({Key? key, this.callback}) : super(key: key);
+  const HomePageScreen({super.key, this.callback});
 
   @override
   State<HomePageScreen> createState() => _HomePageScreenState();

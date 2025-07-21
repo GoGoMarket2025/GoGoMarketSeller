@@ -28,7 +28,7 @@ class EditAddressScreen extends StatefulWidget {
   final String? lat;
   final String? lng;
 
-   const EditAddressScreen({Key? key, this.isBilling, this.address, this.city, this.zip, this.name, this.number, this.orderId, this.email, this.lat, this.lng}) : super(key: key);
+   const EditAddressScreen({super.key, this.isBilling, this.address, this.city, this.zip, this.name, this.number, this.orderId, this.email, this.lat, this.lng});
 
   @override
   State<EditAddressScreen> createState() => EditAddressScreenState();

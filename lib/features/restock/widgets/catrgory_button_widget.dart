@@ -10,7 +10,7 @@ class CategoryButtonWidget extends StatelessWidget {
   final String? text;
   final int index;
   final int? categoryId;
-  const CategoryButtonWidget({Key? key, required this.text, required this.index, this.categoryId}) : super(key: key);
+  const CategoryButtonWidget({super.key, required this.text, required this.index, this.categoryId});
 
   @override
   Widget build(BuildContext context) {

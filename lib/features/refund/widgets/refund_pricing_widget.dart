@@ -8,7 +8,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/features/refund/widgets/refund_details_widget.dart';
 
 class RefundPricingWidget extends StatelessWidget {
-  const RefundPricingWidget({Key? key}) : super(key: key);
+  const RefundPricingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

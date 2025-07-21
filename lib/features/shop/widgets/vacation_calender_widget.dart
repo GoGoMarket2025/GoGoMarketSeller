@@ -8,7 +8,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class VacationCalenderWidget extends StatefulWidget {
-  const VacationCalenderWidget({Key? key}) : super(key: key);
+  const VacationCalenderWidget({super.key});
 
   @override
   State<VacationCalenderWidget> createState() => VacationCalenderWidgetState();

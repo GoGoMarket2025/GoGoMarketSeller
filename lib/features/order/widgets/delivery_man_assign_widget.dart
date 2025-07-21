@@ -15,7 +15,7 @@ class DeliveryManAssignWidget extends StatefulWidget {
   final int? orderId;
   final String? orderType;
   final Order? orderModel;
-  const DeliveryManAssignWidget({Key? key, this.orderType, this.orderModel, this.orderId}) : super(key: key);
+  const DeliveryManAssignWidget({super.key, this.orderType, this.orderModel, this.orderId});
 
   @override
   State<DeliveryManAssignWidget> createState() => _DeliveryManAssignWidgetState();

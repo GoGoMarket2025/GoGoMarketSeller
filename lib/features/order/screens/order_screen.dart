@@ -16,7 +16,7 @@ import 'package:sixvalley_vendor_app/features/home/widgets/order_widget.dart';
 class OrderScreen extends StatefulWidget {
   final bool isBacButtonExist;
   final bool fromHome;
-  const OrderScreen({Key? key, this.isBacButtonExist = false, this.fromHome = false}) : super(key: key);
+  const OrderScreen({super.key, this.isBacButtonExist = false, this.fromHome = false});
 
   @override
   State<OrderScreen> createState() => _OrderScreenState();
@@ -106,7 +106,7 @@ class _OrderScreenState extends State<OrderScreen> {
 }
 
 class OrderShimmer extends StatelessWidget {
-  const OrderShimmer({Key? key}) : super(key: key);
+  const OrderShimmer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -163,7 +163,7 @@ class OrderTypeButton extends StatelessWidget {
   final String? text;
   final int index;
 
-  const OrderTypeButton({Key? key, required this.text, required this.index}) : super(key: key);
+  const OrderTypeButton({super.key, required this.text, required this.index});
 
   @override
   Widget build(BuildContext context) {

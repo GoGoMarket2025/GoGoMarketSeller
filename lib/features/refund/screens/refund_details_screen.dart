@@ -19,7 +19,7 @@ class RefundDetailsScreen extends StatefulWidget {
   final int? orderDetailsId;
   final String? variation;
   final bool? fromNotification;
-  const RefundDetailsScreen({Key? key, this.refundModel, this.orderDetailsId, this.variation, this.fromNotification = false}) : super(key: key);
+  const RefundDetailsScreen({super.key, this.refundModel, this.orderDetailsId, this.variation, this.fromNotification = false});
 
   @override
   State<RefundDetailsScreen> createState() => _RefundDetailsScreenState();

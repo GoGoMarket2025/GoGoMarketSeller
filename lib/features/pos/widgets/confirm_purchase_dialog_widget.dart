@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_button_widget.dar
 
 class ConfirmPurchaseDialogWidget extends StatelessWidget {
   final Function? onYesPressed;
-  const ConfirmPurchaseDialogWidget({Key? key, required this.onYesPressed}) : super(key: key);
+  const ConfirmPurchaseDialogWidget({super.key, required this.onYesPressed});
 
   @override
   Widget build(BuildContext context) {

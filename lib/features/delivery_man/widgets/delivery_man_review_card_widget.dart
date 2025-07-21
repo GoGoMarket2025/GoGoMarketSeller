@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_image_widget.dart
 
 class DeliveryManReviewCardWidget extends StatelessWidget {
   final DeliveryManReview reviewModel;
-  const DeliveryManReviewCardWidget({Key? key, required this.reviewModel}) : super(key: key);
+  const DeliveryManReviewCardWidget({super.key, required this.reviewModel});
 
   @override
   Widget build(BuildContext context) {

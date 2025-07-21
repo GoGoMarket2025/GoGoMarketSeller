@@ -9,7 +9,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/delivery_man_
 
 class DeliveryManEarningViewAllScreen extends StatefulWidget {
   final DeliveryMan? deliveryMan;
-  const DeliveryManEarningViewAllScreen({Key? key, this.deliveryMan}) : super(key: key);
+  const DeliveryManEarningViewAllScreen({super.key, this.deliveryMan});
 
   @override
   State<DeliveryManEarningViewAllScreen> createState() => _DeliveryManEarningViewAllScreenState();

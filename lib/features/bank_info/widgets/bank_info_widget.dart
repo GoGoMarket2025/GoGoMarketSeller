@@ -9,7 +9,7 @@ class BankInfoWidget extends StatelessWidget {
   final String? bank;
   final String? branch;
   final String? accountNo;
-  const BankInfoWidget({Key? key, this.name, this.bank, this.branch, this.accountNo}) : super(key: key);
+  const BankInfoWidget({super.key, this.name, this.bank, this.branch, this.accountNo});
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class BankInfoWidget extends StatelessWidget {
 class CardItem extends StatelessWidget {
   final String? title;
   final String? value;
-  const CardItem({Key? key, this.title, this.value}) : super(key: key);
+  const CardItem({super.key, this.title, this.value});
 
   @override
   Widget build(BuildContext context) {

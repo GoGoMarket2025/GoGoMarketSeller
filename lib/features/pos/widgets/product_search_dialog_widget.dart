@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/features/pos/widgets/searched_product_item_
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class ProductSearchDialogWidget extends StatelessWidget {
-  const ProductSearchDialogWidget({Key? key}) : super(key: key);
+  const ProductSearchDialogWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

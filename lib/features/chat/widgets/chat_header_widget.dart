@@ -9,7 +9,7 @@ import 'package:sixvalley_vendor_app/features/chat/widgets/chat_type_button_widg
 
 
 class ChatHeaderWidget extends StatefulWidget {
-  const ChatHeaderWidget({Key? key}) : super(key: key);
+  const ChatHeaderWidget({super.key});
 
   @override
   State<ChatHeaderWidget> createState() => _ChatHeaderWidgetState();

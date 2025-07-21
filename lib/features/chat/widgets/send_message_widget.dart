@@ -13,7 +13,7 @@ import 'package:flutter/foundation.dart' as foundation;
 
 class SendMessageWidget extends StatefulWidget {
   final int? id;
-  const SendMessageWidget({Key? key, this.id}) : super(key: key);
+  const SendMessageWidget({super.key, this.id});
 
   @override
   State<SendMessageWidget> createState() => _SendMessageWidgetState();

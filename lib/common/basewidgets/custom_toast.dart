@@ -13,7 +13,7 @@ class CustomToast extends StatelessWidget {
   final SnackBarType sanckBarType;
 
   const CustomToast({
-    Key? key,
+    super.key,
     required this.text,
     this.backgroundColor = const Color(0xE608AE61),
     // sanckBarType == SnackBarType.success ?  Color(0xE608AE61) : sanckBarType == SnackBarType.warning ?  Color(0xE6334257) :  Color(0xE6334257),
@@ -21,7 +21,7 @@ class CustomToast extends StatelessWidget {
     this.borderRadius = 30,
     this.padding = const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
     required this.sanckBarType
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

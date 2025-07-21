@@ -16,7 +16,7 @@ import 'delete_account_warning_dialog.dart';
 
 class SignOutConfirmationDialogWidget extends StatelessWidget {
   final bool isDelete;
-  const SignOutConfirmationDialogWidget({Key? key, this.isDelete = false}) : super(key: key);
+  const SignOutConfirmationDialogWidget({super.key, this.isDelete = false});
 
   @override
   Widget build(BuildContext context) {

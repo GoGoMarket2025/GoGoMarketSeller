@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/features/product/widgets/top_most_product_c
 class TopSellingProductScreen extends StatelessWidget {
   final bool isMain;
   final ScrollController? scrollController;
-  const TopSellingProductScreen({Key? key, this.isMain = false, this.scrollController}) : super(key: key);
+  const TopSellingProductScreen({super.key, this.isMain = false, this.scrollController});
 
   @override
   Widget build(BuildContext context) {

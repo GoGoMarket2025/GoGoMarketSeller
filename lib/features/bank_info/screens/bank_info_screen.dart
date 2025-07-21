@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_app_bar_widget.da
 import 'package:sixvalley_vendor_app/features/bank_info/widgets/bank_info_widget.dart';
 
 class BankInfoScreen extends StatelessWidget {
-  const BankInfoScreen({Key? key}) : super(key: key);
+  const BankInfoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -21,7 +21,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_snackbar_widget.d
 import 'package:sixvalley_vendor_app/common/basewidgets/textfeild/custom_text_feild_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   @override
   ProfileScreenState createState() => ProfileScreenState();
@@ -58,7 +58,7 @@ class ProfileScreenState extends State<ProfileScreen> {
     });
   }
 
-  _updateUserAccount() async {
+  Future<void> _updateUserAccount() async {
     String firstName = _firstNameController.text.trim();
     String lastName = _firstNameController.text.trim();
     String phoneNumber = _phoneController.text.trim();

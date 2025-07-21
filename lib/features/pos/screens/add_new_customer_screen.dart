@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/textfeild/custom_text_fe
 import 'package:sixvalley_vendor_app/features/auth/widgets/code_picker_widget.dart';
 
 class AddNewCustomerScreen extends StatefulWidget {
-  const AddNewCustomerScreen({Key? key}) : super(key: key);
+  const AddNewCustomerScreen({super.key});
 
   @override
   State<AddNewCustomerScreen> createState() => _AddNewCustomerScreenState();

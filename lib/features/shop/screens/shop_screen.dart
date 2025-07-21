@@ -20,7 +20,7 @@ import 'package:sixvalley_vendor_app/features/shop/widgets/shop_information_widg
 import 'package:sixvalley_vendor_app/features/shop/widgets/vacation_dialog_widget.dart';
 
 class ShopScreen extends StatefulWidget {
-  const ShopScreen({Key? key}) : super(key: key);
+  const ShopScreen({super.key});
 
   @override
   ShopScreenState createState() => ShopScreenState();
@@ -248,7 +248,7 @@ class ShopSettingWidget extends StatelessWidget {
   final Function(bool value)? onTap;
   final Function()? onPress;
   final bool dateSelection;
-  const ShopSettingWidget({Key? key, this.title, this.icon, this.mode, this.onTap, this.dateSelection = false, this.onPress}) : super(key: key);
+  const ShopSettingWidget({super.key, this.title, this.icon, this.mode, this.onTap, this.dateSelection = false, this.onPress});
 
   @override
   Widget build(BuildContext context) {

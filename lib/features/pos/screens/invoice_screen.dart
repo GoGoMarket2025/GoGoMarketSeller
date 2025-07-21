@@ -19,7 +19,7 @@ import 'invoice_print_screen.dart';
 
 class InVoiceScreen extends StatefulWidget {
   final int? orderId;
-  const InVoiceScreen({Key? key, this.orderId}) : super(key: key);
+  const InVoiceScreen({super.key, this.orderId});
 
   @override
   State<InVoiceScreen> createState() => _InVoiceScreenState();
@@ -104,14 +104,14 @@ class _InVoiceScreenState extends State<InVoiceScreen> {
                     subTotal += cartController.calculateInvoiceProductPrice(cartController.invoice!.details![i]);
                   }
 
-                  print('-----orderAmount---->>${orderAmount}');
+                  print('-----orderAmount---->>$orderAmount');
                   print('-----ExtraDiscountAmount---->>${cartController.invoice!.extraDiscount!}');
                   print('-----ExtraDiscountType---->>${cartController.invoice!.extraDiscountType}');
 
                   extraDiscountAmount = double.parse(PriceConverter.discountCalculationWithOutSymbol(context, orderAmount, cartController.invoice!.extraDiscount!, cartController.invoice!.extraDiscountType));
 
 
-                  print('-----EXAmount---->>${extraDiscountAmount}');
+                  print('-----EXAmount---->>$extraDiscountAmount');
                   // extraDiscountAmount
 
                   totalPayableAmount = (double.tryParse(PriceConverter.convertPriceWithoutSymbol(context , orderAmount + cartController.totalTaxAmount - cartController.discountOnProduct - cartController.invoice!.discountAmount! + includeTax)) ?? 0) - extraDiscountAmount;

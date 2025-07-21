@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/features/profile/widgets/theme_changer_widg
 
 
 class ProfileScreenView extends StatefulWidget {
-  const ProfileScreenView({Key? key}) : super(key: key);
+  const ProfileScreenView({super.key});
 
   @override
   ProfileScreenViewState createState() => ProfileScreenViewState();
@@ -151,7 +151,7 @@ class InfoItem extends StatelessWidget {
   final String? title;
   final String? amount;
   final bool isMoney;
-  const InfoItem({Key? key, this.icon, this.title, this.amount, this.isMoney = false}) : super(key: key);
+  const InfoItem({super.key, this.icon, this.title, this.amount, this.isMoney = false});
 
   @override
   Widget build(BuildContext context) {

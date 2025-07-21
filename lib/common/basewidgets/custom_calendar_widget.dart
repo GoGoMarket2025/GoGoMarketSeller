@@ -8,7 +8,7 @@ import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 class CustomCalendarWidget extends StatefulWidget {
   final PickerDateRange? initDateRange;
   final Function(PickerDateRange? dateRange) onSubmit;
-  const CustomCalendarWidget({Key? key, required this.onSubmit, this.initDateRange}) : super(key: key);
+  const CustomCalendarWidget({super.key, required this.onSubmit, this.initDateRange});
 
   @override
   State<CustomCalendarWidget> createState() => _CustomCalendarWidgetState();

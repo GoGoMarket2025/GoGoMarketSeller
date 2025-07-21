@@ -19,7 +19,7 @@ class LimitedStockQuantityUpdateDialogWidget extends StatefulWidget {
   final TextEditingController? note;
   final TextEditingController? stockQuantityController;
   final Product? product;
-  const LimitedStockQuantityUpdateDialogWidget({Key? key, this.title, required this.onYesPressed, this.note, this.product, this.stockQuantityController}) : super(key: key);
+  const LimitedStockQuantityUpdateDialogWidget({super.key, this.title, required this.onYesPressed, this.note, this.product, this.stockQuantityController});
 
   @override
   State<LimitedStockQuantityUpdateDialogWidget> createState() => _LimitedStockQuantityUpdateDialogWidgetState();

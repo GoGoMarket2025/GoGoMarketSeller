@@ -10,7 +10,7 @@ class CustomDateRangePickerWidget extends StatefulWidget {
   final bool requiredField;
   final Function? selectDate;
   final bool isFromHistory;
-  const CustomDateRangePickerWidget({Key? key, this.text,this.image, this.requiredField = false,this.selectDate, this.isFromHistory = false}) : super(key: key);
+  const CustomDateRangePickerWidget({super.key, this.text,this.image, this.requiredField = false,this.selectDate, this.isFromHistory = false});
 
   @override
   State<CustomDateRangePickerWidget> createState() => _CustomDateRangePickerWidgetState();

@@ -21,6 +21,8 @@ import 'package:sixvalley_vendor_app/localization/language_constrants.dart';
 import 'package:sixvalley_vendor_app/main.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 
+import '../../product_details/controllers/product_details_controller.dart';
+
 class OrderDetailsController extends ChangeNotifier{
   final OrderDetailsServiceInterface orderDetailsServiceInterface;
   OrderDetailsController({required this.orderDetailsServiceInterface});
@@ -42,7 +44,7 @@ class OrderDetailsController extends ChangeNotifier{
   bool _isUploadLoading = false;
   bool get isUploadLoading=> _isUploadLoading;
 
-  bool _isUpdating = false;
+  final bool _isUpdating = false;
   bool get isUpdating=> _isUpdating;
 
   Set<Marker> _markers = HashSet<Marker>();
@@ -218,7 +220,7 @@ class OrderDetailsController extends ChangeNotifier{
               androidConfig: AndroidConfig(
                 folderType: selectedFolderType,
               ),
-              iosConfig: const IosConfig(), // Просто создаем пустой IosConfig
+              iosConfig: IosConfig(), // Просто создаем пустой IosConfig
             );
           }else {
             // Navigator.of(Get.context!).pop();

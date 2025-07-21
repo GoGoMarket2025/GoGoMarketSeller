@@ -20,7 +20,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/textfeild/custom_text_fe
 
 
 class ShopUpdateScreen extends StatefulWidget {
-  const ShopUpdateScreen({Key? key}) : super(key: key);
+  const ShopUpdateScreen({super.key});
 
   @override
   ShopUpdateScreenState createState() => ShopUpdateScreenState();
@@ -52,7 +52,7 @@ class ShopUpdateScreenState extends State<ShopUpdateScreen> {
   }
 
 
-  _updateShop() async {
+  Future<void> _updateShop() async {
     String shopName = _shopNameController.text.trim();
     String contactNumber = _contactNumberController.text.trim();
     String address = _addressController.text.trim();

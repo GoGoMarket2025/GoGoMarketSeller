@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/features/order_details/screens/order_detail
 class OrderWidget extends StatelessWidget {
   final Order orderModel;
   final int? index;
-  const OrderWidget({Key? key, required this.orderModel, this.index}) : super(key: key);
+  const OrderWidget({super.key, required this.orderModel, this.index});
 
   @override
   Widget build(BuildContext context) {

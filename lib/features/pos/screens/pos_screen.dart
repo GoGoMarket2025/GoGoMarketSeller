@@ -31,7 +31,7 @@ import '../../../main.dart';
 
 class PosScreen extends StatefulWidget {
   final bool fromMenu;
-  const PosScreen({Key? key, this.fromMenu = false}) : super(key: key);
+  const PosScreen({super.key, this.fromMenu = false});
 
   @override
   State<PosScreen> createState() => _PosScreenState();

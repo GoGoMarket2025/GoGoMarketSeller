@@ -146,6 +146,8 @@ class Images {
   static const String bd = 'assets/image/bangladesh.png';
   static const String hindi = 'assets/image/india.png';
   static const String spanish = 'assets/image/spain.png';
+  static const String ru = 'assets/images/russian.png';
+  static const String uzbek = 'assets/image/uzbek.png';
   static const String mapBg = 'assets/image/map_bg.png';
   static const String shippingIcon = 'assets/image/shipping_icon.png';
   static const String orderSummery = 'assets/image/order_summery.png';

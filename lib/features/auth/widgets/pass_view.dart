@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 
 class PassView extends StatelessWidget {
-  const PassView({Key? key}) : super(key: key);
+  const PassView({super.key});
 
   @override
   Widget build(BuildContext context) {

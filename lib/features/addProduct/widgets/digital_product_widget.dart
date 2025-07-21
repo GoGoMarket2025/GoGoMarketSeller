@@ -17,7 +17,7 @@ class DigitalProductWidget extends StatefulWidget {
   final AddProductController? resProvider;
   final Product? product;
   final bool fromAddProductNextScreen;
-  const DigitalProductWidget({Key? key, this.resProvider, this.product, this.fromAddProductNextScreen = false}) : super(key: key);
+  const DigitalProductWidget({super.key, this.resProvider, this.product, this.fromAddProductNextScreen = false});
 
   @override
   State<DigitalProductWidget> createState() => _DigitalProductWidgetState();

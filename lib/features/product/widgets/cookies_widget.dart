@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class CookiesWidget extends StatelessWidget {
-  const CookiesWidget({Key? key}) : super(key: key);
+  const CookiesWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

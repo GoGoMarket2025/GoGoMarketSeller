@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 class CustomHeaderWidget extends StatelessWidget {
   final String headerImage;
   final String? title;
-  const CustomHeaderWidget({Key? key, required this.title, required this.headerImage}) : super(key: key);
+  const CustomHeaderWidget({super.key, required this.title, required this.headerImage});
 
   @override
   Widget build(BuildContext context) {

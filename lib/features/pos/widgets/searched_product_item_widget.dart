@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/features/pos/widgets/product_variation_sele
 
 class SearchedProductItemWidget extends StatelessWidget {
   final Product? product;
-  const SearchedProductItemWidget({Key? key, this.product}) : super(key: key);
+  const SearchedProductItemWidget({super.key, this.product});
 
   @override
   Widget build(BuildContext context) {

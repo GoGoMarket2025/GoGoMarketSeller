@@ -13,7 +13,7 @@ import 'package:sixvalley_vendor_app/features/addProduct/screens/add_product_scr
 
 class ChangeLogWidget extends StatelessWidget {
   final String paidBy;
-  const ChangeLogWidget({Key? key, required this.paidBy}) : super(key: key);
+  const ChangeLogWidget({super.key, required this.paidBy});
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ class ItemWidget extends StatelessWidget {
   final String? lestValue;
   final String? rightValue;
   final bool isPayment;
-  const ItemWidget({Key? key, required this.lestValue, required this.rightValue,  this.isPayment = false}) : super(key: key);
+  const ItemWidget({super.key, required this.lestValue, required this.rightValue,  this.isPayment = false});
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/features/home/widgets/transaction_chart_widget.dart';
 
 class ChartWidget extends StatelessWidget {
-  const ChartWidget({Key? key}) : super(key: key);
+  const ChartWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

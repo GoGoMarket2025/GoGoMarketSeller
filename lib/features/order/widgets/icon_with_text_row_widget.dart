@@ -8,7 +8,7 @@ class IconWithTextRowWidget extends StatelessWidget {
   final Color? iconColor;
   final Color? textColor;
   final bool bold;
-  const IconWithTextRowWidget({Key? key,  required this.text, required this.icon, this.iconColor, this.textColor,  this.bold = false}) : super(key: key);
+  const IconWithTextRowWidget({super.key,  required this.text, required this.icon, this.iconColor, this.textColor,  this.bold = false});
 
 
   @override

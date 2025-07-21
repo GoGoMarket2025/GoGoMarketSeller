@@ -9,7 +9,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class OrderChangeLogWidget extends StatelessWidget {
   final int? orderId;
-  const OrderChangeLogWidget({Key? key, this.orderId}) : super(key: key);
+  const OrderChangeLogWidget({super.key, this.orderId});
 
   @override
   Widget build(BuildContext context) {

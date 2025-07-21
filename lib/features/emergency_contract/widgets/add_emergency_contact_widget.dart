@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/textfeild/custom_text_fe
 class AddEmergencyContactWidget extends StatefulWidget {
   final ContactList? contactList;
   final int? index;
-  const AddEmergencyContactWidget({Key? key,  this.index, this.contactList}) : super(key: key);
+  const AddEmergencyContactWidget({super.key,  this.index, this.contactList});
 
   @override
   State<AddEmergencyContactWidget> createState() => _AddEmergencyContactWidgetState();

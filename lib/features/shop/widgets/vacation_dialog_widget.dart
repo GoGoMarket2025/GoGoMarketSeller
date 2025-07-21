@@ -19,7 +19,7 @@ class VacationDialogWidget extends StatelessWidget {
 
 
   final TextEditingController? note;
-  const VacationDialogWidget({Key? key, required this.icon, this.title, required this.vacationNote, required this.onYesPressed, this.note,}) : super(key: key);
+  const VacationDialogWidget({super.key, required this.icon, this.title, required this.vacationNote, required this.onYesPressed, this.note,});
 
   @override
   Widget build(BuildContext context) {

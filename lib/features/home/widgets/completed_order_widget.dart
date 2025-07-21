@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/features/home/widgets/order_type_button_wid
 
 class CompletedOrderWidget extends StatelessWidget {
   final Function? callback;
-  const CompletedOrderWidget({Key? key, this.callback}) : super(key: key);
+  const CompletedOrderWidget({super.key, this.callback});
 
   @override
   Widget build(BuildContext context) {

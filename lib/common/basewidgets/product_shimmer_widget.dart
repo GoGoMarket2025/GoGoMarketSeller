@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 
 class ProductShimmerWidget extends StatelessWidget {
   final bool isEnabled;
-  const ProductShimmerWidget({Key? key, required this.isEnabled}) : super(key: key);
+  const ProductShimmerWidget({super.key, required this.isEnabled});
 
   @override
   Widget build(BuildContext context) {

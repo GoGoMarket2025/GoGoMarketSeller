@@ -9,7 +9,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/screens/withdraw/with
 
 
 class WithdrawListView extends StatelessWidget {
-  const WithdrawListView({Key? key}) : super(key: key);
+  const WithdrawListView({super.key});
 
   @override
   Widget build(BuildContext context) {

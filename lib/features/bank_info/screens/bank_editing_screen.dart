@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_snackbar_widget.d
 class BankEditingScreen extends StatefulWidget {
 
   final ProfileInfoModel? sellerModel;
-  const BankEditingScreen({Key? key, required this.sellerModel}) : super(key: key);
+  const BankEditingScreen({super.key, required this.sellerModel});
   @override
   BankEditingScreenState createState() => BankEditingScreenState();
 }
@@ -37,7 +37,7 @@ class BankEditingScreenState extends State<BankEditingScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
 
-  _updateUserAccount() async {
+  Future<void> _updateUserAccount() async {
     String bankName = _bankNameController!.text.trim();
     String branchName = _branchController!.text.trim();
     String holderName = _holderNameController!.text.trim();

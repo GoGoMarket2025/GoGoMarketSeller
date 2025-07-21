@@ -17,7 +17,7 @@ class ConfirmationDialogWidget extends StatelessWidget {
   final bool refund;
   final Color? color;
   final TextEditingController? note;
-  const ConfirmationDialogWidget({Key? key, required this.icon, this.title, this.description, required this.onYesPressed, this.isLogOut = false, this.refund = false, this.note, this.color}) : super(key: key);
+  const ConfirmationDialogWidget({super.key, required this.icon, this.title, this.description, required this.onYesPressed, this.isLogOut = false, this.refund = false, this.note, this.color});
 
   @override
   Widget build(BuildContext context) {

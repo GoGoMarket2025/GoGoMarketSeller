@@ -5,7 +5,7 @@ import 'package:sixvalley_vendor_app/features/chat/controllers/chat_controller.d
 import 'package:sixvalley_vendor_app/helper/color_helper.dart';
 
 class ChatShimmerWidget extends StatelessWidget {
-  const ChatShimmerWidget({Key? key}) : super(key: key);
+  const ChatShimmerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

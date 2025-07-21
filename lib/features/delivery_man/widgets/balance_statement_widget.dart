@@ -8,7 +8,7 @@ class BalanceStatementWidget extends StatelessWidget {
   final String? icon;
   final Color? color;
   final double? amount;
-  const BalanceStatementWidget({Key? key, this.text, this.icon, this.color, this.amount}) : super(key: key);
+  const BalanceStatementWidget({super.key, this.text, this.icon, this.color, this.amount});
 
   @override
   Widget build(BuildContext context) {

@@ -5,8 +5,8 @@ class UnicornOutlineButtonWidget extends StatelessWidget {
   final Widget _child;
   final VoidCallback? _callback;
   final double _radius;
-  UnicornOutlineButtonWidget({Key? key, required double strokeWidth, required double radius, required Gradient gradient, required Widget child, VoidCallback? onPressed,
-  })  : _painter = _GradientPainter(strokeWidth: strokeWidth, radius: radius, gradient: gradient), _child = child, _callback = onPressed, _radius = radius, super(key: key);
+  UnicornOutlineButtonWidget({super.key, required double strokeWidth, required double radius, required Gradient gradient, required Widget child, VoidCallback? onPressed,
+  })  : _painter = _GradientPainter(strokeWidth: strokeWidth, radius: radius, gradient: gradient), _child = child, _callback = onPressed, _radius = radius;
   @override
   Widget build(BuildContext context) {
     return CustomPaint(

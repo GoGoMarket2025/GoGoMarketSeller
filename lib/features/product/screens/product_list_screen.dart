@@ -18,7 +18,7 @@ import 'package:sixvalley_vendor_app/features/product/widgets/product_widget.dar
 
 class ProductListMenuScreen extends StatefulWidget {
   final bool fromNotification;
-  const ProductListMenuScreen({Key? key,  this.fromNotification = false}) : super(key: key);
+  const ProductListMenuScreen({super.key,  this.fromNotification = false});
   @override
   State<ProductListMenuScreen> createState() => _ProductListMenuScreenState();
 }

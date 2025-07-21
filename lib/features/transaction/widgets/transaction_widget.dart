@@ -13,7 +13,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class TransactionWidget extends StatelessWidget {
   final TransactionModel transactionModel;
-  const TransactionWidget({Key? key, required this.transactionModel}) : super(key: key);
+  const TransactionWidget({super.key, required this.transactionModel});
 
   @override
   Widget build(BuildContext context) {

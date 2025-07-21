@@ -11,7 +11,7 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 class TransactionChart extends StatefulWidget {
 
-  const TransactionChart({Key? key}) : super(key: key);
+  const TransactionChart({super.key});
 
   @override
   State<StatefulWidget> createState() => TransactionChartState();

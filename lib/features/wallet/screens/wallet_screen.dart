@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class WalletScreen extends StatefulWidget {
   final bool fromNotification;
-  const WalletScreen({Key? key, this.fromNotification = false}) : super(key: key);
+  const WalletScreen({super.key, this.fromNotification = false});
 
   @override
   State<WalletScreen> createState() => _WalletScreenState();

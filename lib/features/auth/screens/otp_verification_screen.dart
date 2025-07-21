@@ -19,7 +19,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 class VerificationScreen extends StatelessWidget {
   final String mobileNumber;
 
-  const VerificationScreen(this.mobileNumber, {Key? key}) : super(key: key);
+  const VerificationScreen(this.mobileNumber, {super.key});
 
   @override
   Widget build(BuildContext context) {

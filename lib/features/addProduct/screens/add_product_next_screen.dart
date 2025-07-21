@@ -51,7 +51,7 @@ class AddProductNextScreen extends StatefulWidget {
   final AddProductModel? addProduct;
   final String? unit;
 
-  const AddProductNextScreen({Key? key, this.isSelected, required this.product,required this.addProduct, this.categoryId, this.subCategoryId, this.subSubCategoryId, this.brandId, this.unit}) : super(key: key);
+  const AddProductNextScreen({super.key, this.isSelected, required this.product,required this.addProduct, this.categoryId, this.subCategoryId, this.subSubCategoryId, this.brandId, this.unit});
 
   @override
   AddProductNextScreenState createState() => AddProductNextScreenState();
@@ -137,7 +137,7 @@ class AddProductNextScreenState extends State<AddProductNextScreen> {
   }
 
 
-  _asyncMethod() async {
+  Future<void> _asyncMethod() async {
     Future.delayed(const Duration(milliseconds: 800), () async {
       Provider.of<AddProductImageController>(Get.context!,listen: false).getProductImage(widget.product!.id.toString(), isStorePreviousImage: true);
     });

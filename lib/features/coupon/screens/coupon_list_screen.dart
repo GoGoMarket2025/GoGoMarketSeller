@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/features/order/screens/order_screen.dart';
 
 
 class CouponListScreen extends StatefulWidget {
-  const CouponListScreen({Key? key}) : super(key: key);
+  const CouponListScreen({super.key});
   @override
   State<CouponListScreen> createState() => _CouponListScreenState();
 }

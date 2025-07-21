@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_app_bar_widget.da
 import 'package:sixvalley_vendor_app/features/product/widgets/stock_out_product_widget.dart';
 
 class StockOutProductScreen extends StatelessWidget {
-  const StockOutProductScreen({Key? key}) : super(key: key);
+  const StockOutProductScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

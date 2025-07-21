@@ -8,7 +8,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class RestockCalenderWidget extends StatefulWidget {
-  const RestockCalenderWidget({Key? key}) : super(key: key);
+  const RestockCalenderWidget({super.key});
 
 
   @override

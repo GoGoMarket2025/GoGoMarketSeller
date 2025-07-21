@@ -18,7 +18,7 @@ import 'package:url_launcher/url_launcher.dart';
 class EmergencyContactCardWidget extends StatelessWidget {
   final ContactList? contactList;
   final int? index;
-  const EmergencyContactCardWidget({Key? key, this.contactList, this.index}) : super(key: key);
+  const EmergencyContactCardWidget({super.key, this.contactList, this.index});
 
   @override
   Widget build(BuildContext context) {

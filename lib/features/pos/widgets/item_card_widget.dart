@@ -13,7 +13,7 @@ class ItemCartWidget extends StatelessWidget {
   final CartModel? cartModel;
   final int? index;
   final void Function() onChanged;
-  const ItemCartWidget({Key? key, this.cartModel, this.index, required this.onChanged}) : super(key: key);
+  const ItemCartWidget({super.key, this.cartModel, this.index, required this.onChanged});
 
   @override
   Widget build(BuildContext context) {

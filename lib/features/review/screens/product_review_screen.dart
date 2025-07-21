@@ -19,7 +19,7 @@ import 'package:sixvalley_vendor_app/features/review/widgets/review_widget.dart'
 
 
 class ProductReviewScreen extends StatefulWidget {
-  const ProductReviewScreen({Key? key}) : super(key: key);
+  const ProductReviewScreen({super.key});
 
   @override
   State<ProductReviewScreen> createState() => _ProductReviewScreenState();

@@ -7,7 +7,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 
 class ShowOnMapDialogWidget extends StatelessWidget {
   final BillingAddressData? billingAddressData;
-  const ShowOnMapDialogWidget({Key? key,required this.billingAddressData}) : super(key: key);
+  const ShowOnMapDialogWidget({super.key,required this.billingAddressData});
 
   @override
   Widget build(BuildContext context) {

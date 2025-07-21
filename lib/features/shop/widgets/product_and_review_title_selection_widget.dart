@@ -6,7 +6,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class ProductAndReviewSelectionWidget extends StatelessWidget {
-  const ProductAndReviewSelectionWidget({Key? key}) : super(key: key);
+  const ProductAndReviewSelectionWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

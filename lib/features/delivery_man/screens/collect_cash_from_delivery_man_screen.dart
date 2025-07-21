@@ -12,7 +12,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/delivery_man_
 
 class CollectedCashFromDeliveryManScreen extends StatefulWidget {
   final DeliveryMan? deliveryMan;
-  const CollectedCashFromDeliveryManScreen({Key? key, this.deliveryMan}) : super(key: key);
+  const CollectedCashFromDeliveryManScreen({super.key, this.deliveryMan});
 
   @override
   State<CollectedCashFromDeliveryManScreen> createState() => _CollectedCashFromDeliveryManScreenState();

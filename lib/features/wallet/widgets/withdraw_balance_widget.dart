@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/common/basewidgets/custom_edit_dialog_widget.dart';
 
 class WithdrawBalanceWidget extends StatefulWidget {
-  const WithdrawBalanceWidget({Key? key}) : super(key: key);
+  const WithdrawBalanceWidget({super.key});
 
   @override
   State<WithdrawBalanceWidget> createState() => _WithdrawBalanceWidgetState();

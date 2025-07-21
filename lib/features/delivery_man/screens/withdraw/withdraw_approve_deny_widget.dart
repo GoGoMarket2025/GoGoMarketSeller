@@ -13,7 +13,7 @@ class ApproveAndDenyWidget extends StatelessWidget {
   final Function? onYesPressed;
   final TextEditingController? note;
   final bool isApprove;
-  const ApproveAndDenyWidget({Key? key, this.icon, this.title, this.onYesPressed, this.note, this.isApprove = false}) : super(key: key);
+  const ApproveAndDenyWidget({super.key, this.icon, this.title, this.onYesPressed, this.note, this.isApprove = false});
 
   @override
   Widget build(BuildContext context) {

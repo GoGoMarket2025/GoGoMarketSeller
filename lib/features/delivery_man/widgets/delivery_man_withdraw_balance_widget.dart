@@ -13,7 +13,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/screens/withdraw/deli
 
 class DeliveryManWithdrawBalanceWidget extends StatelessWidget {
   final DeliveryManController? deliveryManProvider;
-  const DeliveryManWithdrawBalanceWidget({Key? key, this.deliveryManProvider}) : super(key: key);
+  const DeliveryManWithdrawBalanceWidget({super.key, this.deliveryManProvider});
   @override
   Widget build(BuildContext context) {
     bool darkMode = Provider.of<ThemeController>(context, listen: false).darkTheme;

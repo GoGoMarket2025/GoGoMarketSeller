@@ -15,7 +15,7 @@ class CustomSearchFieldWidget extends StatefulWidget {
   final Function? onChanged;
   final Function? filterAction;
   final bool isFilter;
-  const CustomSearchFieldWidget({Key? key,
+  const CustomSearchFieldWidget({super.key,
     required this.controller,
     required this.hint,
     required this.prefix,
@@ -24,7 +24,7 @@ class CustomSearchFieldWidget extends StatefulWidget {
     this.onChanged,
     this.filterAction,
     this.isFilter = false,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomSearchFieldWidget> createState() => _CustomSearchFieldWidgetState();

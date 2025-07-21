@@ -21,7 +21,7 @@ class RefundDetailWidget extends StatefulWidget {
   final RefundModel? refundModel;
   final int? orderDetailsId;
   final String? variation;
-  const RefundDetailWidget({Key? key, required this.refundModel, required this.orderDetailsId, this.variation}) : super(key: key);
+  const RefundDetailWidget({super.key, required this.refundModel, required this.orderDetailsId, this.variation});
   @override
   RefundDetailWidgetState createState() => RefundDetailWidgetState();
 }
@@ -162,7 +162,7 @@ class ProductCalculationItem extends StatelessWidget {
   final int? qty;
   final bool isNegative;
   final bool isPositive;
-  const ProductCalculationItem({Key? key, this.title, this.price, this.isQ = false, this.isNegative = false, this.isPositive = false, this.qty}) : super(key: key);
+  const ProductCalculationItem({super.key, this.title, this.price, this.isQ = false, this.isNegative = false, this.isPositive = false, this.qty});
 
   @override
   Widget build(BuildContext context) {

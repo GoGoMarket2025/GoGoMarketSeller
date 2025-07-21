@@ -19,7 +19,7 @@ class MessageBubbleWidget extends StatelessWidget {
   final Message message;
   final Message? previous;
   final Message? next;
-  const MessageBubbleWidget({Key? key, required this.message, this.previous, this.next}) : super(key: key);
+  const MessageBubbleWidget({super.key, required this.message, this.previous, this.next});
 
   @override
   Widget build(BuildContext context) {

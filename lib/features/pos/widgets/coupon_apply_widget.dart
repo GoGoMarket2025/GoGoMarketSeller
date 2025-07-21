@@ -11,7 +11,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_field_with_title_
 import 'package:sixvalley_vendor_app/common/basewidgets/textfeild/custom_text_feild_widget.dart';
 
 class CouponDialogWidget extends StatelessWidget {
-  const CouponDialogWidget({Key? key}) : super(key: key);
+  const CouponDialogWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_snackbar_widget.d
 class CartBottomSheetWidget extends StatefulWidget {
   final Product? product;
   final Function? callback;
-  const CartBottomSheetWidget({Key? key, required this.product, this.callback}) : super(key: key);
+  const CartBottomSheetWidget({super.key, required this.product, this.callback});
 
   @override
   CartBottomSheetWidgetState createState() => CartBottomSheetWidgetState();
@@ -25,7 +25,7 @@ class CartBottomSheetWidget extends StatefulWidget {
 
 class CartBottomSheetWidgetState extends State<CartBottomSheetWidget> {
 
-  route(bool isRoute, String message) async {
+  Future<void> route(bool isRoute, String message) async {
     if (isRoute) {
       showCustomSnackBarWidget(message, context, isError: false);
       Navigator.pop(context);
@@ -514,13 +514,13 @@ class QuantityButton extends StatelessWidget {
   final bool digitalProduct;
   final bool disable;
 
-  const QuantityButton({Key? key,
+  const QuantityButton({super.key,
     required this.isIncrement,
     required this.quantity,
     required this.stock,
     this.isCartWidget = false,required this.minimumOrderQuantity,required this.digitalProduct,
     this.disable = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

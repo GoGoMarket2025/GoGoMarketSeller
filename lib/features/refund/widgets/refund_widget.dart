@@ -17,7 +17,7 @@ class RefundWidget extends StatelessWidget {
   final RefundModel? refundModel;
   final bool isDetails;
   final bool isLast;
-  const RefundWidget({Key? key, required this.refundModel, this.isDetails = false, this.isLast = false}) : super(key: key);
+  const RefundWidget({super.key, required this.refundModel, this.isDetails = false, this.isLast = false});
 
   @override
   Widget build(BuildContext context) {

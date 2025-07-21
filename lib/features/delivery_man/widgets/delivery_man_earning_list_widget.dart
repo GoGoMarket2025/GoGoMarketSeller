@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/features/delivery_man/widgets/delivery_man_
 
 class DeliveryManEarningListWidget extends StatefulWidget {
   final DeliveryMan? deliveryMan;
-  const DeliveryManEarningListWidget({Key? key, this.deliveryMan}) : super(key: key);
+  const DeliveryManEarningListWidget({super.key, this.deliveryMan});
 
   @override
   State<DeliveryManEarningListWidget> createState() => _DeliveryManEarningListWidgetState();
@@ -57,7 +57,7 @@ class EarningItemCard extends StatelessWidget {
   final double? amount;
   final String? title;
   final String? icon;
-  const EarningItemCard({Key? key, this.amount, this.title, this.icon}) : super(key: key);
+  const EarningItemCard({super.key, this.amount, this.title, this.icon});
 
   @override
   Widget build(BuildContext context) {

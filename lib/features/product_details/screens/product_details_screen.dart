@@ -15,7 +15,7 @@ import 'package:sixvalley_vendor_app/features/product_details/widgets/product_de
 
 class ProductDetailsScreen extends StatefulWidget {
   final Product? productModel;
-  const ProductDetailsScreen({Key? key, this.productModel}) : super(key: key);
+  const ProductDetailsScreen({super.key, this.productModel});
 
   @override
   State<ProductDetailsScreen> createState() => _ProductDetailsScreenState();

@@ -9,7 +9,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 
 class CouponDetailsDialogWidget extends StatelessWidget {
   final Coupons? coupons;
-  const CouponDetailsDialogWidget({Key? key, this.coupons}) : super(key: key);
+  const CouponDetailsDialogWidget({super.key, this.coupons});
 
   @override
   Widget build(BuildContext context) {

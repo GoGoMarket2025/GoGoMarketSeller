@@ -8,7 +8,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 
 
 class InboxShimmerWidget extends StatelessWidget {
-  const InboxShimmerWidget({Key? key}) : super(key: key);
+  const InboxShimmerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

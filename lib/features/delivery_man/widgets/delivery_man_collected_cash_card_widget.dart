@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 class DeliveryManCollectedCashCardWidget extends StatelessWidget {
   final CollectedCash collectedCash;
   final int? index;
-  const DeliveryManCollectedCashCardWidget({Key? key, required this.collectedCash, this.index}) : super(key: key);
+  const DeliveryManCollectedCashCardWidget({super.key, required this.collectedCash, this.index});
 
   @override
   Widget build(BuildContext context) {

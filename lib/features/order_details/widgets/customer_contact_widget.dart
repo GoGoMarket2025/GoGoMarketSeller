@@ -10,7 +10,7 @@ import 'package:sixvalley_vendor_app/common/basewidgets/custom_image_widget.dart
 
 class CustomerContactWidget extends StatelessWidget {
   final Order? orderModel;
-  const CustomerContactWidget({Key? key, this.orderModel}) : super(key: key);
+  const CustomerContactWidget({super.key, this.orderModel});
 
   @override
   Widget build(BuildContext context) {

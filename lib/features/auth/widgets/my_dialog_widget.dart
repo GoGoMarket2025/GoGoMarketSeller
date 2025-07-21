@@ -9,7 +9,7 @@ class MyDialogWidget extends StatelessWidget {
   final IconData icon;
   final String? title;
   final String? description;
-  const MyDialogWidget({Key? key, this.isFailed = false, this.rotateAngle = 0, required this.icon, required this.title, required this.description}) : super(key: key);
+  const MyDialogWidget({super.key, this.isFailed = false, this.rotateAngle = 0, required this.icon, required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {

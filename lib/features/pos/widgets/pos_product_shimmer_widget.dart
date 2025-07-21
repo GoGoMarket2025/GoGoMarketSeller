@@ -4,7 +4,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 
 
 class PosProductShimmerWidget extends StatelessWidget {
-  const PosProductShimmerWidget({Key? key}) : super(key: key);
+  const PosProductShimmerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

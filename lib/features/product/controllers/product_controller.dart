@@ -108,12 +108,12 @@ class ProductController extends ChangeNotifier {
   Set<int> get selectedBrandIds => _selectedBrandIds;
 
   bool _isPriceRangeValid = true;
-  get isPriceRangeValid => _isPriceRangeValid;
+  bool get isPriceRangeValid => _isPriceRangeValid;
 
   double? _invalidMinPrice;
-  get invalidMinPrice => _invalidMinPrice;
+  double? get invalidMinPrice => _invalidMinPrice;
   double? _invalidMaxPrice;
-  get invalidMaxPrice => _invalidMaxPrice;
+  double? get invalidMaxPrice => _invalidMaxPrice;
 
   List<BrandModel>? _brandList;
   List<BrandModel>? get brandList => _brandList;

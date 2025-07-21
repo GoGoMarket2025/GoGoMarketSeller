@@ -27,7 +27,7 @@ import 'package:sixvalley_vendor_app/features/barcode/screens/bar_code_generator
 
 class StockOutProductWidget extends StatefulWidget {
   final Product productModel;
-   const StockOutProductWidget({Key? key, required this.productModel}) : super(key: key);
+   const StockOutProductWidget({super.key, required this.productModel});
 
   @override
   State<StockOutProductWidget> createState() => _StockOutProductWidgetState();

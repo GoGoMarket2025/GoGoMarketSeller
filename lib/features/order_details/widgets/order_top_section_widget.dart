@@ -14,7 +14,7 @@ import 'package:sixvalley_vendor_app/utill/styles.dart';
 class OrderTopSectionWidget extends StatelessWidget {
   final Order? orderModel;
   final bool? fromNotification;
-  const OrderTopSectionWidget({Key? key, this.orderModel, this.fromNotification}) : super(key: key);
+  const OrderTopSectionWidget({super.key, this.orderModel, this.fromNotification});
 
   @override
   Widget build(BuildContext context) {
