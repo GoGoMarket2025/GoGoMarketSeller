@@ -12,7 +12,12 @@
           "package_name": "com.homegogomarket.deliveryapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDOXzSODnfxKS4Thit88ihsFWoITB3M0hk"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homegogomarket.user.app"
+              }
+            }
+          ]
         }
       }
     },
@@ -31,7 +48,12 @@
           "package_name": "com.homegogomarket.seller.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDOXzSODnfxKS4Thit88ihsFWoITB3M0hk"
@@ -39,7 +61,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homegogomarket.user.app"
+              }
+            }
+          ]
         }
       }
     },
@@ -50,7 +84,12 @@
           "package_name": "com.homegogomarket.selller.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDOXzSODnfxKS4Thit88ihsFWoITB3M0hk"
@@ -58,7 +97,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homegogomarket.user.app"
+              }
+            }
+          ]
         }
       }
     },
@@ -69,7 +120,20 @@
           "package_name": "com.homegogomarket.userapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1000922177401-p27fi6c2ml91mtmvefh91k8515gusd8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.homegogomarket.userapp",
+            "certificate_hash": "fe3dfafa9a2ea0ee3efb6a305dbdcfdcbdc0d1c5"
+          }
+        },
+        {
+          "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDOXzSODnfxKS4Thit88ihsFWoITB3M0hk"
@@ -77,7 +141,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homegogomarket.user.app"
+              }
+            }
+          ]
         }
       }
     }

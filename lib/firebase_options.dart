@@ -63,6 +63,9 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1000922177401',
     projectId: 'homegogomarket',
     storageBucket: 'homegogomarket.firebasestorage.app',
+    androidClientId: '1000922177401-p27fi6c2ml91mtmvefh91k8515gusd8n.apps.googleusercontent.com',
+    iosClientId: '1000922177401-mbif9k05v1908j9koj5frcln3lp1i9i1.apps.googleusercontent.com',
     iosBundleId: 'com.homegogomarket.seller.app',
   );
+
 }
