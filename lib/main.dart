@@ -69,6 +69,11 @@ Future<void> main() async {
       options: DefaultFirebaseOptions.currentPlatform,
     );
   }
+
+  // Вывод FCM токена в консоль
+  FirebaseMessaging.instance.getToken().then((token) {
+    print('FCM Token: ' + (token ?? 'null'));
+  });
   await FlutterDownloader.initialize(debug: true , ignoreSsl: true);
   await di.init();
 

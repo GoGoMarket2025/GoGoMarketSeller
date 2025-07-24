@@ -22,7 +22,7 @@ import 'package:sixvalley_vendor_app/utill/app_constants.dart';
 import 'package:sixvalley_vendor_app/features/chat/screens/inbox_screen.dart';
 import 'package:sixvalley_vendor_app/features/notification/screens/notification_screen.dart';
 import 'package:sixvalley_vendor_app/features/order_details/screens/order_details_screen.dart';
-
+import 'package:sixvalley_vendor_app/notification/my_notification.dart';
 import '../main.dart';
 
 class MyNotification {

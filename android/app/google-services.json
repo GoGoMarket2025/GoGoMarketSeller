@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1000922177401-l4lsp44dc63vk6kkvccrr9n5uf222b0j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.homegogomarket.deliveryapp",
+            "certificate_hash": "fe3dfafa9a2ea0ee3efb6a305dbdcfdcbdc0d1c5"
+          }
+        },
+        {
           "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -31,10 +39,10 @@
               "client_type": 3
             },
             {
-              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_id": "1000922177401-5t1vfqaga5373pau6cvo6duraaa4fmdp.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.homegogomarket.user.app"
+                "bundle_id": "com.homegogomarket.user.ap"
               }
             }
           ]
@@ -67,10 +75,10 @@
               "client_type": 3
             },
             {
-              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_id": "1000922177401-5t1vfqaga5373pau6cvo6duraaa4fmdp.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.homegogomarket.user.app"
+                "bundle_id": "com.homegogomarket.user.ap"
               }
             }
           ]
@@ -85,6 +93,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1000922177401-l3q0cvdjg62pl42lgdrbfj4as3stm87c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.homegogomarket.selller.app",
+            "certificate_hash": "fe3dfafa9a2ea0ee3efb6a305dbdcfdcbdc0d1c5"
+          }
+        },
         {
           "client_id": "1000922177401-fjfrb841s0a75d7jnt3j2f8g94m0b1da.apps.googleusercontent.com",
           "client_type": 3
@@ -103,10 +119,10 @@
               "client_type": 3
             },
             {
-              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_id": "1000922177401-5t1vfqaga5373pau6cvo6duraaa4fmdp.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.homegogomarket.user.app"
+                "bundle_id": "com.homegogomarket.user.ap"
               }
             }
           ]
@@ -147,10 +163,10 @@
               "client_type": 3
             },
             {
-              "client_id": "1000922177401-jlsjrgd5hbuu9m8f4e1tjfr259fi7fvn.apps.googleusercontent.com",
+              "client_id": "1000922177401-5t1vfqaga5373pau6cvo6duraaa4fmdp.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.homegogomarket.user.app"
+                "bundle_id": "com.homegogomarket.user.ap"
               }
             }
           ]

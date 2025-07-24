@@ -127,13 +127,15 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
                         Container(decoration: BoxDecoration(color: Theme.of(context).cardColor, boxShadow: ThemeShadow.getShadow(context)),
                           child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
 
-                            if(Provider.of<SplashController>(context, listen: false).configModel?.orderVerification == 1 &&  orderDetailsController.orderDetails![0].order!.orderType != 'POS')
-                              Padding(padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
-                                child: Center(child: Text.rich(TextSpan(children: [
-                                  TextSpan(text: '${getTranslated('order_verification_code', context)} : ', style: robotoRegular.copyWith(color: Theme.of(context).hintColor)),
-                                  TextSpan(text: orderDetailsController.orderDetails![0].order?.verificationCode??'', style: robotoBold.copyWith(color: Theme.of(context).primaryColor)),
-                                ])),),
-                              ),
+                            // УДАЛЕНО: Показывать verification code продавцу не нужно
+                            // if(Provider.of<SplashController>(context, listen: false).configModel?.orderVerification == 1 &&  orderDetailsController.orderDetails![0].order!.orderType != 'POS')
+                            //   Padding(
+                            //     padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+                            //     child: Center(child: Text.rich(TextSpan(children: [
+                            //       TextSpan(text: '${getTranslated('order_verification_code', context)} : ', style: robotoRegular.copyWith(color: Theme.of(context).hintColor)),
+                            //       TextSpan(text: orderDetailsController.orderDetails![0].order?.verificationCode??'', style: robotoBold.copyWith(color: Theme.of(context).primaryColor)),
+                            //     ])),),
+                            //   ),
 
                             orderDetailsController.orderDetails![0].order!.orderType == 'POS'? const SizedBox():
                             ShippingAndBillingWidget(orderModel: orderDetailsController.orderDetails![0].order!, onlyDigital: _onlyDigital, orderType: orderDetailsController.orderDetails![0].order!.orderType!),
